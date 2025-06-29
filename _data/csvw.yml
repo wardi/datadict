@@ -1,0 +1,40 @@
+- |
+  "primaryKey": "𝓍"
+- |
+  "primaryKey": ["𝓍", "𝓎"]
+- |
+  "foreignKeys": [{
+    "columnReference": ["𝓍"],
+    "reference": {
+      "resource": "https://𝓎",
+      "columnReference": ["𝓏"]
+    }
+  }]
+- |
+  "columns": [
+    { "name": "𝓍", … },
+    …
+  ]
+- |
+  "titles": ["𝓍", "𝓎"]
+- |
+  "titles": {
+    "en": "𝓍",
+    "fr": ["𝓎", "𝓏"]
+  }
+- |
+  "dc:description": "𝓍"
+- |
+  "datatype": "string",
+  "required": true
+- |
+  "datatype": "boolean"
+- |
+  "enum": [𝓍, 𝓎, 𝓏]
+- |
+  "datatype": {
+    "base": "date",
+    "format": "yyyy-M-d"
+  }
+- |
+  "examples": [𝓍, 𝓎] 

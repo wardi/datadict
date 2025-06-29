@@ -1,0 +1,38 @@
+- |
+  "primaryKey": ["𝓍", "𝓎"]
+- |
+  "primaryKey": ["𝓍", "𝓎"]
+- |
+  "foreignKeys": [{
+    "fields": ["𝓍"],
+    "reference": {
+      "resource": "𝓎",
+      "fields": ["𝓏"]
+    }
+  }]
+- |
+  "fields": [
+    { "name": "𝓍", … },
+    …
+  ]
+- |
+  "title": "𝓍"
+- null
+- |
+  "description": "𝓍"
+- |
+  "type": "string",
+  "constraints": {
+    "required": true
+  }
+- |
+  "type": "boolean"
+- |
+  "constraints": {
+    "enum": [𝓍, 𝓎, 𝓏]
+  }
+- |
+  "type": "date",
+  "format": "default"
+- |
+  "example": 𝓍 

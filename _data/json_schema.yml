@@ -1,0 +1,23 @@
+- null
+- null
+- null
+- |
+  "properties": {
+    "𝓍": {…},
+    …
+  }
+- |
+  "title": "𝓍"
+- null
+- |
+  "description": "𝓍"
+- |
+  "type": "string"
+- |
+  "type": ["boolean", "null"]
+- |
+  "constraints": {"enum": [𝓍, 𝓎, 𝓏]}
+- |
+  "type": "string", "format": "date"
+- |
+  "example": 𝓍 
