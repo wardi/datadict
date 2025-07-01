@@ -242,6 +242,9 @@
             color: var(--text);
             padding: 0.3em 0.5em;
         }
+        table.dataTable.display > tbody > tr > td {
+          border: none;
+        }
         .dataTable tbody tr:hover {
             background: var(--table-row-hover);
         }
@@ -293,20 +296,20 @@
     <div class="container" id="main-container">
         {{ content }}
     </div>
-    
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
     <!-- DataTables JS -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
-    
+
     <!-- Prism.js for syntax highlighting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-    
+
     <script>
         // Initialize DataTables
         $(document).ready(function() {
@@ -316,7 +319,10 @@
                 pageLength: 25,
                 ordering: false,
                 searching: false,
+                paging: false,
+                info: false,
                 dom: 'Bfrtip',
+                stripeClasses: [],
                 buttons: [
                     'excel', 'pdf'
                 ],
@@ -329,10 +335,10 @@
                     zeroRecords: "No matching records found"
                 }
             });
-            
+
             // Highlight syntax in JSON examples
             Prism.highlightAll();
         });
     </script>
 </body>
-</html> 
+</html>
