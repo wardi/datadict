@@ -25,7 +25,7 @@ title: Home
 
         {% for i in (0..11) %}
         <tr>
-          <td style="min-width: 180px;">{{ descriptions[i] }}</td>
+          <td style="min-width: 180px;"><div class="desc-example">{{ descriptions[i] }}</div></td>
           <td>
             {% if csvw[i] %}
             <div class="json-example">
