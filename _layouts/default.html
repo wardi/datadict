@@ -189,7 +189,7 @@
         }
         /* DataTables customization for dark theme */
         .dataTables_wrapper {
-            padding: 1.5rem;
+            padding: 0.5rem;
             background: var(--bg-secondary);
         }
         .dataTables_filter input, .dataTables_length select {
@@ -228,15 +228,19 @@
             background: var(--bg-secondary);
             color: var(--text);
         }
+        .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > th, .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > td, .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > th, .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > td {
+            vertical-align: top;
+        }
         .dataTable thead th {
             background: var(--table-header);
             color: var(--text);
             border-bottom: 2px solid var(--accent);
+            padding: 0.4em 0.6em;
         }
         .dataTable tbody td {
             background: var(--bg-secondary);
             color: var(--text);
-            border-bottom: 1px solid var(--border);
+            padding: 0.3em 0.5em;
         }
         .dataTable tbody tr:hover {
             background: var(--table-row-hover);
@@ -245,13 +249,13 @@
         .json-example {
             background: var(--code-bg);
             border-radius: 6px;
-            margin: 1rem 0;
+            margin: 0.3rem 0;
             overflow: hidden;
             border: 1px solid var(--border);
         }
         .json-example pre {
             margin: 0;
-            padding: 1rem;
+            padding: 0.5em 0.7em;
             font-size: 13px;
             line-height: 1.5;
             background: var(--code-bg);
