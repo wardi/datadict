@@ -1,12 +1,12 @@
-- Primary key
-- Composite keys
-- Foreign keys
-- Fields and names
-- Field title
-- Multilingual, alternative <br> field titles
-- Field description
-- Required string field
-- Optional boolean field
-- Controlled list field
-- ISO Date field
-- Example field value(s)
+primary_key: Primary key
+composite_keys: Composite keys
+foreign_keys: Foreign keys
+fields: Fields and names
+field_title: Field title
+alt_titles: Multilingual, alternative <br> field titles
+field_description: Field description
+required_string: Required string field
+optional_boolean: Optional boolean field
+controlled_list: Controlled list field
+iso_date: ISO Date field
+example: Example field value(s)

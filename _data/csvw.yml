@@ -1,8 +1,8 @@
-- |
+primary_key: |
   "primaryKey": "𝓍"
-- |
+composite_keys: |
   "primaryKey": ["𝓍", "𝓎"]
-- |
+foreign_keys: |
   "foreignKeys": [{
     "columnReference": ["𝓍"],
     "reference": {
@@ -10,29 +10,29 @@
       "columnReference": ["𝓏"]
     }
   }]
-- |
+fields: |
   "columns": [
     { "name": "𝓍", … },
     …
   ]
-- |
+field_title: |
   "titles": "𝓍"
-- |
+alt_titles: |
   "titles": {
     "en": "𝓍",
     "fr": ["𝓎", "𝓏"]
   }
-- |
+field_description: |
   "dc:description": "𝓍"
-- |
+required_string: |
   "datatype": "string",
   "required": true
-- |
+optional_boolean: |
   "datatype": "boolean"
-- null
-- |
+controlled_list: null
+iso_date: |
   "datatype": {
     "base": "date",
     "format": "yyyy-M-d"
   }
-- null
+example: null

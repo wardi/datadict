@@ -1,24 +1,24 @@
-- null
-- null
-- null
-- |
+primary_key: null
+composite_keys: null
+foreign_keys: null
+fields: |
   "properties": {
     "𝓍": {…},
     …
   }
-- |
+field_title: |
   "title": "𝓍"
-- null
-- |
+alt_title: null
+description: |
   "description": "𝓍"
-- |
+required_string: |
   "type": "string"
-- |
+optional_boolean: |
   "type": ["boolean", "null"]
-- |
+controlled_list: |
   "enum": [𝓍, 𝓎, 𝓏]
-- |
+iso_date: |
   "type": "string",
   "format": "date"
-- |
+example: |
   "examples": [𝓍]

@@ -23,27 +23,28 @@ title: Home
         {% assign json_schema = site.data.json_schema %}
         {% assign data_package = site.data.data_package %}
 
-        {% for i in (0..11) %}
+        {% for desc in descriptions %}
+        {% assign key = desc[0] %}
         <tr>
-          <td style="min-width: 180px;"><div class="desc-example">{{ descriptions[i] }}</div></td>
+          <td style="min-width: 180px;"><div class="desc-example">{{ desc[1] }}</div></td>
           <td>
-            {% if csvw[i] %}
+            {% if csvw[key] %}
             <div class="json-example">
-              <pre><code class="language-json">{{ csvw[i] }}</code></pre>
+              <pre><code class="language-json">{{ csvw[key] }}</code></pre>
             </div>
             {% endif %}
           </td>
           <td>
-            {% if json_schema[i] %}
+            {% if json_schema[key] %}
             <div class="json-example">
-              <pre><code class="language-json">{{ json_schema[i] }}</code></pre>
+              <pre><code class="language-json">{{ json_schema[key] }}</code></pre>
             </div>
             {% endif %}
           </td>
           <td>
-            {% if data_package[i] %}
+            {% if data_package[key] %}
             <div class="json-example">
-              <pre><code class="language-json">{{ data_package[i] }}</code></pre>
+              <pre><code class="language-json">{{ data_package[key] }}</code></pre>
             </div>
             {% endif %}
           </td>
