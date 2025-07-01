@@ -16,7 +16,7 @@
     …
   ]
 - |
-  "titles": ["𝓍", "𝓎"]
+  "titles": "𝓍"
 - |
   "titles": {
     "en": "𝓍",
@@ -29,12 +29,10 @@
   "required": true
 - |
   "datatype": "boolean"
-- |
-  "enum": [𝓍, 𝓎, 𝓏]
+- null
 - |
   "datatype": {
     "base": "date",
     "format": "yyyy-M-d"
   }
-- |
-  "examples": [𝓍, 𝓎] 
+- null

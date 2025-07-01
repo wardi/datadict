@@ -16,8 +16,9 @@
 - |
   "type": ["boolean", "null"]
 - |
-  "constraints": {"enum": [𝓍, 𝓎, 𝓏]}
+  "enum": [𝓍, 𝓎, 𝓏]
 - |
-  "type": "string", "format": "date"
+  "type": "string",
+  "format": "date"
 - |
-  "example": 𝓍 
+  "example": 𝓍

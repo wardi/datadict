@@ -1,5 +1,5 @@
 - |
-  "primaryKey": ["𝓍", "𝓎"]
+  "primaryKey": "𝓍"
 - |
   "primaryKey": ["𝓍", "𝓎"]
 - |
@@ -35,4 +35,4 @@
   "type": "date",
   "format": "default"
 - |
-  "example": 𝓍 
+  "example": 𝓍
