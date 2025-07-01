@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
     <style>
@@ -167,7 +168,6 @@
         .datatable-container {
             background: var(--bg-secondary);
             border-radius: 8px;
-            overflow: hidden;
         }
         .datatable-header {
             padding: 1.5rem;
@@ -292,6 +292,11 @@
         .desc-example {
             margin: 0.3rem 0;
         }
+        .datatable {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: auto;
+        }
     </style>
 </head>
 <body>
@@ -314,6 +319,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
 
     <!-- Prism.js for syntax highlighting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
@@ -323,8 +329,8 @@
         // Initialize DataTables
         $(document).ready(function() {
             $('.datatable').DataTable({
-                responsive: false,
-                scrollX: true,
+                responsive: true,
+                scrollX: false,
                 pageLength: 25,
                 ordering: false,
                 searching: false,

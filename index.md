@@ -7,7 +7,7 @@ layout: default
 
 <div class="datatable-container">
   <div class="datatable-content">
-    <table class="datatable display responsive nowrap" style="width:100%">
+    <table class="datatable">
       <thead>
         <tr>
           <th>Description</th>
