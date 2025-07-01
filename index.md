@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
+title: Home
 ---
 
 <div class="datatable-container">
@@ -10,18 +11,21 @@ layout: default
     <table class="datatable display responsive nowrap" style="width:100%">
       <thead>
         <tr>
+          <th>Description</th>
           <th>CSVW</th>
           <th>JSON Schema</th>
           <th>Data Package Table Schema</th>
         </tr>
       </thead>
       <tbody>
+        {% assign descriptions = site.data.feature_descriptions %}
         {% assign csvw = site.data.csvw %}
         {% assign json_schema = site.data.json_schema %}
         {% assign data_package = site.data.data_package %}
 
         {% for i in (0..11) %}
         <tr>
+          <td style="min-width: 180px;">{{ descriptions[i] }}</td>
           <td>
             {% if csvw[i] %}
             <div class="json-example">
