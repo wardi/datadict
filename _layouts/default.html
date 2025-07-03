@@ -270,21 +270,6 @@
             color: var(--bg);
             border-color: var(--accent);
         }
-        .dt-layout-start {
-            height: 0;
-        }
-        .dt-layout-start > .dt-buttons {
-            top: 2em;
-            left: 0.5em;
-            position: relative;
-        }
-        .dt-buttons > .dt-button-collection {
-            width: 20em;
-            background: var(--bg);
-        }
-        div.dt-button-collection .dt-button:hover:not(.disabled) {
-            background: var(--color) !important;
-        }
         /* Dark theme for info text */
         .dataTables_info {
             color: var(--text-secondary);
@@ -348,10 +333,10 @@
                 stripeClasses: [],
                 fixedHeader: true,
                 layout: {
-                  topStart: {
+                  topEnd: {
                     buttons: [
                       {
-                        extend: 'colvis',
+                        extend: 'columnsVisibility',
                         columns: 'th:nth-child(n+2)',
                         text: 'Formats',
                         background: false,
