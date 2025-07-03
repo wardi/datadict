@@ -10,7 +10,7 @@ layout: default
     <table class="datatable">
       <thead>
         <tr>
-          <th>Description</th>
+          <th></th>
           <th>CSVW</th>
           <th>JSON Schema</th>
           <th>Data Package Table Schema</th>

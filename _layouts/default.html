@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link href="https://cdn.datatables.net/v/dt/dt-2.3.2/b-3.2.4/b-colvis-3.2.4/fh-4.0.3/sr-1.4.1/datatables.css" rel="stylesheet" integrity="sha384-LJ8v7FPzZ9ELaLMRPqgL1UGC/qFNCxiBNLFa2z/sVBlk+viwuUN6ZzPSWDpl1FTn" crossorigin="anonymous">
+    <script src="https://cdn.datatables.net/v/dt/dt-2.3.2/b-3.2.4/b-colvis-3.2.4/fh-4.0.3/sr-1.4.1/datatables.js" integrity="sha384-MQmVGt8scm9p66I5hnJWCJH0+QitCMpUrxfCvGbVvly97RUcgxodsdQSLybboOBa" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
@@ -267,13 +269,26 @@
             color: var(--text);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 8px 12px;
-            margin: 0 2px;
         }
         .dt-buttons .dt-button:hover {
             background: var(--accent);
             color: var(--bg);
             border-color: var(--accent);
+        }
+        .dt-layout-start {
+            height: 0;
+        }
+        .dt-layout-start > .dt-buttons {
+            top: 2em;
+            left: 0.5em;
+            position: relative;
+        }
+        .dt-buttons > .dt-button-collection {
+            width: 20em;
+            background: var(--bg);
+        }
+        div.dt-button-collection .dt-button:hover:not(.disabled) {
+            background: var(--color) !important;
         }
         /* Dark theme for info text */
         .dataTables_info {
@@ -319,12 +334,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- DataTables JS -->
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-
+<link href="https://cdn.datatables.net/v/dt/dt-2.3.2/b-3.2.4/b-colvis-3.2.4/fh-4.0.3/sr-1.4.1/datatables.css" rel="stylesheet" integrity="sha384-LJ8v7FPzZ9ELaLMRPqgL1UGC/qFNCxiBNLFa2z/sVBlk+viwuUN6ZzPSWDpl1FTn" crossorigin="anonymous">
+ 
+<script src="https://cdn.datatables.net/v/dt/dt-2.3.2/b-3.2.4/b-colvis-3.2.4/fh-4.0.3/sr-1.4.1/datatables.js" integrity="sha384-MQmVGt8scm9p66I5hnJWCJH0+QitCMpUrxfCvGbVvly97RUcgxodsdQSLybboOBa" crossorigin="anonymous"></script>
     <!-- Prism.js for syntax highlighting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
@@ -340,18 +352,19 @@
                 searching: false,
                 paging: false,
                 info: false,
-                dom: 'Bfrtip',
                 stripeClasses: [],
-                buttons: [
-                    'excel', 'pdf'
-                ],
-                language: {
-                    search: "Search:",
-                    lengthMenu: "Show _MENU_ entries per page",
-                    info: "Showing _START_ to _END_ of _TOTAL_ entries",
-                    infoEmpty: "Showing 0 to 0 of 0 entries",
-                    infoFiltered: "(filtered from _MAX_ total entries)",
-                    zeroRecords: "No matching records found"
+                fixedHeader: true,
+                layout: {
+                  topStart: {
+                    buttons: [
+                      {
+                        extend: 'colvis',
+                        columns: 'th:nth-child(n+2)',
+                        text: 'Formats',
+                        background: false,
+                      }
+                    ]
+                  }
                 }
             });
 
