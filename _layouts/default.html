@@ -160,7 +160,7 @@
         .container {
             max-width: 100%;
             margin: 0;
-            padding: 20px;
+            padding: 0 10px;
         }
         .datatable-container {
             background: var(--bg-secondary);
@@ -270,18 +270,15 @@
             color: var(--bg);
             border-color: var(--accent);
         }
+        .dt-layout-row h1, .dt-buttons {
+            margin: 0.3em 0.5em;
+        }
+        h1 {
+            font-size: 130%;
+        }
         /* Dark theme for info text */
         .dataTables_info {
             color: var(--text-secondary);
-        }
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            .dataTables_wrapper {
-                padding: 1rem;
-            }
         }
         .desc-example {
             margin: 0.3rem 0;
@@ -333,7 +330,10 @@
                 stripeClasses: [],
                 fixedHeader: true,
                 layout: {
-                  topEnd: {
+                  top: {
+                    div: {
+                      html: '<h1>Data Dictionary Formats</h1>'
+                    },
                     buttons: [
                       {
                         extend: 'columnsVisibility',
