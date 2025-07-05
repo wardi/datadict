@@ -1,0 +1,39 @@
+title: Data Package Table Schema
+feature_examples:
+  primary_key: |
+    "primaryKey": "𝓍"
+  composite_keys: |
+    "primaryKey": ["𝓍", "𝓎"]
+  foreign_keys: |
+    "foreignKeys": [{
+      "fields": ["𝓍"],
+      "reference": {
+        "resource": "𝓎",
+        "fields": ["𝓏"]
+      }
+    }]
+  fields: |
+    "fields": [
+      { "name": "𝓍", … },
+      …
+    ]
+  field_title: |
+    "title": "𝓍"
+  field_description: |
+    "description": "𝓍"
+  required_string: |
+    "type": "string",
+    "constraints": {
+      "required": true
+    }
+  optional_boolean: |
+    "type": "boolean"
+  controlled_list: |
+    "constraints": {
+      "enum": [𝓍, 𝓎, 𝓏]
+    }
+  iso_date: |
+    "type": "date",
+    "format": "default"
+  example: |
+    "example": 𝓍

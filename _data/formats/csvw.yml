@@ -1,0 +1,43 @@
+title: CSVW
+feature_examples:
+  primary_key: |
+    "primaryKey": "𝓍"
+  composite_keys: |
+    "primaryKey": ["𝓍", "𝓎"]
+  foreign_keys: |
+    "foreignKeys": [{
+      "columnReference": ["𝓍"],
+      "reference": {
+        "resource": "https://𝓎",
+        "columnReference": ["𝓏"]
+      }
+    }]
+  fields: |
+    "columns": [
+      { "name": "𝓍", … },
+      …
+    ]
+  field_title:
+  - |
+    "titles": "𝓍"
+  - |
+    "titles": ["𝓍", "𝓎"]
+  - |
+    "titles": {
+      "en": "𝓍",
+      "fr": ["𝓎", "𝓏"]
+    }
+  field_description: |
+    "dc:description": "𝓍"
+  required_string: |
+    "datatype": "string",
+    "required": true
+  optional_boolean: |
+    "datatype": "boolean"
+  controlled_list: null
+  iso_date: |
+    "datatype": {
+      "base": "date",
+      "format": "yyyy-M-d"
+    }
+  example: null
