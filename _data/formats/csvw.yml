@@ -1,8 +1,10 @@
 title: CSVW
+example_language: json
 feature_examples:
-  primary_key: |
+  primary_key:
+  - |
     "primaryKey": "𝓍"
-  composite_keys: |
+  - |
     "primaryKey": ["𝓍", "𝓎"]
   foreign_keys: |
     "foreignKeys": [{

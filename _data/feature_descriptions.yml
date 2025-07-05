@@ -1,5 +1,4 @@
 primary_key: Primary key
-composite_keys: Composite keys
 foreign_keys: Foreign keys
 fields: Fields and names
 field_title: Field title

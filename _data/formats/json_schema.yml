@@ -1,7 +1,7 @@
 title: JSON Schema
+example_language: json
 feature_examples:
   primary_key: null
-  composite_keys: null
   foreign_keys: null
   fields: |
     "properties": {

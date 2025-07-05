@@ -27,7 +27,8 @@ layout: default
                 {% assign egs = fmt[1].feature_examples[key] %}
                 {% for eg in egs %}
                   <div class="example">
-                    <pre><code class="language-json">{{ eg }}</code></pre>
+                    <pre><code class="language-{{ fmt[1].example_language }}"
+                      >{{ eg }}</code></pre>
                   </div>
                 {% endfor %}
               </td>
