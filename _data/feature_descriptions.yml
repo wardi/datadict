@@ -3,7 +3,6 @@ composite_keys: Composite keys
 foreign_keys: Foreign keys
 fields: Fields and names
 field_title: Field title
-alt_titles: Multilingual, alternative <br> field titles
 field_description: Field description
 required_string: Required string field
 optional_boolean: Optional boolean field

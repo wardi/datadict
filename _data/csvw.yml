@@ -15,9 +15,12 @@ fields: |
     { "name": "𝓍", … },
     …
   ]
-field_title: |
+field_title:
+- |
   "titles": "𝓍"
-alt_titles: |
+- |
+  "titles": ["𝓍", "𝓎"]
+- |
   "titles": {
     "en": "𝓍",
     "fr": ["𝓎", "𝓏"]

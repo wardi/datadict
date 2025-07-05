@@ -27,11 +27,18 @@ layout: default
         <tr>
           <td style="min-width: 180px;"><div class="desc-example">{{ desc[1] }}</div></td>
           <td>
-            {% if csvw[key] %}
-            <div class="json-example">
-              <pre><code class="language-json">{{ csvw[key] }}</code></pre>
-            </div>
+            {% if csvw[key].size > 0 %}
+              {% assign egs = csvw[key] %}
+            {% elsif csvw[key] %}
+              {% assign egs = csvw[key] %}
+            {% else %}
+              {% assign egs = [] %}
             {% endif %}
+            {% for eg in egs %}
+              <div class="json-example">
+                <pre><code class="language-json">{{ eg }}</code></pre>
+              </div>
+            {% endfor %}
           </td>
           <td>
             {% if json_schema[key] %}
