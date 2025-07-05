@@ -1,0 +1,30 @@
+title: PostgreSQL
+url: https://www.postgresql.org/docs/current/sql-createtable.html
+example_language: sql
+feature_examples:
+  primary_key:
+  - |
+    primary key ("𝓍")
+  - |
+    primary key ("𝓍", "𝓎")
+  foreign_keys: |
+    foreign key ("𝓍")
+    references "𝓎"("𝓏")
+  fields: |
+    create table … (
+      "𝓍" …,
+      …
+    );
+  field_title: |
+    comment on column …
+    is '𝓍';
+  field_description: null
+  required_string: |
+    text not null
+  optional_boolean: |
+    boolean
+  controlled_list: |
+    check (… in (𝓍, 𝓎, 𝓏))
+  iso_date: |
+    date
+  example: null

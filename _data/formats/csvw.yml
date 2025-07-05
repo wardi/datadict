@@ -1,4 +1,5 @@
 title: CSVW
+url: https://w3c.github.io/csvw/metadata/
 example_language: json
 feature_examples:
   primary_key:

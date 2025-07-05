@@ -1,4 +1,5 @@
-title: Data Package Table Schema
+title: Data Package
+url: https://datapackage.org/standard/table-schema/
 example_language: json
 feature_examples:
   primary_key:
@@ -30,10 +31,15 @@ feature_examples:
     }
   optional_boolean: |
     "type": "boolean"
-  controlled_list: |
-    "constraints": {
-      "enum": [𝓍, 𝓎, 𝓏]
-    }
+  controlled_list:
+  - |
+    "categories": [𝓍, 𝓎, 𝓏]
+  - |
+    "categories": [
+      {"value": 𝓍, "label": "𝓧"},
+      {"value": 𝓎, "label": "𝓨"},
+      {"value": 𝓏, "label": "𝓩"},
+    ]
   iso_date: |
     "type": "date",
     "format": "default"

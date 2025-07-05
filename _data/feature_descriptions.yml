@@ -7,4 +7,4 @@ required_string: Required string field
 optional_boolean: Optional boolean field
 controlled_list: Controlled list field
 iso_date: ISO Date field
-example: Example field value(s)
+example: Field examples

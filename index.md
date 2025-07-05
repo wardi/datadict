@@ -12,7 +12,8 @@ layout: default
         <tr>
           <th></th>
           {% for fmt in site.data.formats %}
-            <th>{{ fmt[1].title }}</th>
+            <th><a target="_blank" href="{{ fmt[1].url }}"
+              >{{ fmt[1].title }}</a></th>
           {% endfor %}
         </tr>
       </thead>
