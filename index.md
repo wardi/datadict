@@ -15,7 +15,7 @@ layout: default
         <input class="format-switch" type="checkbox" id="switch-{{ fmt[0] }}" data-col="{{ forloop.index }}" checked>
         <span class="slider"></span>
       </label>
-      <span class="switch-label">{{ fmt[1].title }}</span>
+      <label for="switch-{{ fmt[0] }}" class="switch-label">{{ fmt[1].title }}</label>
     </div>
   {% endfor %}
 </div>
