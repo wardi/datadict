@@ -14,13 +14,13 @@ feature_examples:
       </xs:documentation>
     </xs:annotation>
   required_string: |
-    <… type="xs:string"/>
+    <xs:element … type="xs:string"/>
   optional_boolean: |
-    <… type="xs:boolean"
-       minOccurs="0"/>
+    <xs:element … type="xs:boolean"
+     minOccurs="0"/>
   iso_date: |
-    <… type="xs:date"
-       minOccurs="0"/>
+    <xs:element … type="xs:date"
+     minOccurs="0"/>
   controlled_list: |
     <xs:simpleType name="𝒕">
       <xs:restriction base="…">
@@ -29,5 +29,5 @@ feature_examples:
         <xs:enumeration value="𝓏"/>
       </xs:restriction>
     </xs:simpleType>
-    <… type="𝒕">
+    <xs:element … type="𝒕">
   example: null
