@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link href="https://cdn.datatables.net/v/dt/dt-2.3.2/b-3.2.4/b-colvis-3.2.4/fh-4.0.3/r-3.0.5/datatables.min.css" rel="stylesheet" integrity="sha384-3+XCL/7wBoVPnl5rHgeud5gNir7IkoVMWZrYIUjRf3Zuwe6md/e3ynBs6svqmBx2" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/v/dt/dt-2.3.2/fc-5.0.4/fh-4.0.3/datatables.min.css" rel="stylesheet" integrity="sha384-qWmUJBbpWcDORy7M/emkpcHWJBnGB0L40cWmBJ42fr/WCkm9XMMYYI9njNEPXZNA" crossorigin="anonymous">
 
     <style>
         :root {
@@ -203,39 +203,10 @@
             padding: 0.5rem;
             background: var(--bg-secondary);
         }
-        .dataTables_filter input, .dataTables_length select {
-            border: 2px solid var(--border);
-            border-radius: 4px;
-            padding: 8px 12px;
-            font-size: 14px;
-            background: var(--bg);
-            color: var(--text);
-        }
-        .dataTables_filter input:focus, .dataTables_length select:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent)22;
-        }
-        .dataTables_paginate .paginate_button {
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 8px 12px;
-            margin: 0 2px;
-            background: var(--bg-secondary);
-            color: var(--text);
-        }
-        .dataTables_paginate .paginate_button:hover {
-            background: var(--table-row-hover);
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-        .dataTables_paginate .paginate_button.current {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: var(--bg);
-        }
         /* Dark theme for DataTables */
-        .dataTable {
+        .dataTable,
+        table.dataTable thead tr > .dtfc-fixed-start,
+        table.dataTable tbody tr > .dtfc-fixed-start {
             background: var(--bg-secondary);
             color: var(--text);
         }
@@ -386,13 +357,12 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/v/dt/dt-2.3.2/b-3.2.4/b-colvis-3.2.4/fh-4.0.3/r-3.0.5/datatables.min.js" integrity="sha384-voWaM7Ls5vkhPKqG16u6NacIzfJApKSGV6+58dmnrUeLB/uRFzlEpms9bWTYE3SM" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-2.3.2/fc-5.0.4/fh-4.0.3/datatables.min.js" integrity="sha384-o4WvXlrqghMPkbphh3ogr4bvRyL508yVfar8ZjWjpN2615ehwVIaEn6LeL2FbbfR" crossorigin="anonymous"></script>
     <script>
         // Initialize DataTables
         $(document).ready(function() {
             var dt = $('.datatable').DataTable({
-                responsive: true,
-                scrollX: false,
+                scrollX: true,
                 pageLength: 25,
                 ordering: false,
                 searching: false,
@@ -400,6 +370,7 @@
                 info: false,
                 stripeClasses: [],
                 fixedHeader: true,
+                fixedColumns: true,
             });
 
             // --- Format Switches Logic ---
