@@ -340,18 +340,33 @@
           color: var(--text);
           font-weight: 500;
         }
+        footer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+          flex-wrap: wrap;
+        }
+        footer div {
+          display: flex;
+          gap: 0.5rem;
+        }
     </style>
 </head>
 <body>
     <div class="container" id="main-container">
         {{ content }}
     </div>
-    <footer style="text-align:center; margin: 2em 0 1em 0; color: var(--text-secondary); font-size: 1em;">
+    <footer>
+      <div>
         <a href="https://github.com/wardi/datadict" target="_blank" style="color: var(--accent); text-decoration: none;">
             Report a bug or make a suggestion
         </a>
-        •
+      </div>
+      <div>
         This page is maintained by <a href="https://excess.org" target="_blank" style="color: var(--accent); text-decoration: none;">Ian Ward</a>
+      </div>
     </footer>
 
     <!-- jQuery -->
