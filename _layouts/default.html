@@ -290,6 +290,7 @@
         }
         h1 {
             font-size: 130%;
+            margin: 0.3em 0 0 0;
         }
         /* Dark theme for info text */
         .dataTables_info {
@@ -399,21 +400,6 @@
                 info: false,
                 stripeClasses: [],
                 fixedHeader: true,
-                layout: {
-                  top: {
-                    div: {
-                      html: '<h1>Data Dictionary Formats</h1>'
-                    },
-                    buttons: [
-                      {
-                        extend: 'columnsVisibility',
-                        columns: 'th:nth-child(n+2)',
-                        text: 'Formats',
-                        background: false,
-                      }
-                    ]
-                  }
-                }
             });
 
             // --- Format Switches Logic ---
