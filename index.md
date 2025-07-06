@@ -5,20 +5,24 @@
 layout: default
 ---
 
-<div class="switch-container" id="format-switches">
-  <div class="switch-wrapper">
+<details>
+  <summary>
     <h1>Data Dictionary Formats</h1>
-  </div>
-  {% for fmt in site.data.formats %}
+  </summary>
+  <div class="switch-container" id="format-switches">
     <div class="switch-wrapper">
-      <label class="switch">
-        <input class="format-switch" type="checkbox" id="switch-{{ fmt[0] }}" data-col="{{ forloop.index }}" checked>
-        <span class="slider"></span>
-      </label>
-      <label for="switch-{{ fmt[0] }}" class="switch-label">{{ fmt[1].title }}</label>
     </div>
-  {% endfor %}
-</div>
+    {% for fmt in site.data.formats %}
+      <div class="switch-wrapper">
+        <label class="switch">
+          <input class="format-switch" type="checkbox" id="switch-{{ fmt[0] }}" data-col="{{ forloop.index }}" checked>
+          <span class="slider"></span>
+        </label>
+        <label for="switch-{{ fmt[0] }}" class="switch-label">{{ fmt[1].title }}</label>
+      </div>
+    {% endfor %}
+  </div>
+</details>
 
 <div class="datatable-container">
   <div class="datatable-content">
