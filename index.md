@@ -10,7 +10,7 @@ layout: default
     <table class="datatable">
       <thead>
         <tr>
-          <th width="90"></th>
+          <th width="90">Feature</th>
           {% for fmt in site.data.formats %}
             <th><a target="_blank" href="{{ fmt[1].url }}"
               >{{ fmt[1].title }}</a></th>
