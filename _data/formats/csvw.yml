@@ -17,7 +17,7 @@ feature_examples:
     }]
   fields: |
     "columns": [
-      { "name": "𝓍", … },
+      {"name": "𝒇", …},
       …
     ]
   field_title:

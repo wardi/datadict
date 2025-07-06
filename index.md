@@ -22,14 +22,14 @@ layout: default
         {% for desc in descriptions %}
           {% assign key = desc[0] %}
           <tr>
-            <td style="min-width: 180px;"><div class="desc-example">{{ desc[1] }}</div></td>
+            <td><div class="desc-example">{{ desc[1] }}</div></td>
             {% for fmt in site.data.formats %}
               <td>
                 {% assign egs = fmt[1].feature_examples[key] %}
                 {% for eg in egs %}
                   <div class="example">
                     <pre><code class="language-{{ fmt[1].example_language }}"
-                      >{{ eg }}</code></pre>
+                      >{{ eg | escape }}</code></pre>
                   </div>
                 {% endfor %}
               </td>

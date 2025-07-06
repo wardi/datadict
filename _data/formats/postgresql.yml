@@ -11,20 +11,20 @@ feature_examples:
     foreign key ("𝓍")
     references "𝓎"("𝓏")
   fields: |
-    create table … (
-      "𝓍" …,
+    create table "𝑻" (
+      "𝒇" …,
       …
     );
-  field_title: |
-    comment on column …
+  field_title: null
+  field_description: |
+    comment on column "𝑻"."𝒇"
     is '𝓍';
-  field_description: null
   required_string: |
     text not null
   optional_boolean: |
     boolean
   controlled_list: |
-    check (… in (𝓍, 𝓎, 𝓏))
+    check ("𝑻"."𝒇" in (𝓍, 𝓎, 𝓏))
   iso_date: |
     date
   example: null

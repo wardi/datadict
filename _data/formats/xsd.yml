@@ -1,0 +1,31 @@
+title: XSD
+url: https://www.w3.org/TR/xmlschema11-1/
+example_language: xml
+feature_examples:
+  primary_key: null
+  foreign_keys: null
+  fields: |
+    <xs:element name="𝒇" …/>
+  field_title: null
+  field_description: |
+    <xs:annotation>
+      <xs:documentation>
+        𝓍
+      </xs:documentation>
+    </xs:annotation>
+  required_string: |
+    <… type="xs:string"/>
+  optional_boolean: |
+    <… type="xs:boolean" minOccurs="0"/>
+  controlled_list: |
+    <xs:simpleType name="𝒕">
+      <xs:restriction base="𝒃">
+        <xs:enumeration value="𝓍"/>
+        <xs:enumeration value="𝓎"/>
+        <xs:enumeration value="𝓏"/>
+      </xs:restriction>
+    </xs:simpleType>
+    <… type="𝒕">
+  iso_date: |
+    <… type="xs:date"/>
+  example: null

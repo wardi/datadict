@@ -17,7 +17,7 @@ feature_examples:
     }]
   fields: |
     "fields": [
-      { "name": "𝓍", … },
+      {"name": "𝒇", …},
       …
     ]
   field_title: |
@@ -36,9 +36,9 @@ feature_examples:
     "categories": [𝓍, 𝓎, 𝓏]
   - |
     "categories": [
-      {"value": 𝓍, "label": "𝓧"},
-      {"value": 𝓎, "label": "𝓨"},
-      {"value": 𝓏, "label": "𝓩"},
+      {"value": 𝓍, "label": "𝑿"},
+      {"value": 𝓎, "label": "𝒀"},
+      {"value": 𝓏, "label": "𝒁"},
     ]
   iso_date: |
     "type": "date",

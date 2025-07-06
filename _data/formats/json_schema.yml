@@ -6,7 +6,7 @@ feature_examples:
   foreign_keys: null
   fields: |
     "properties": {
-      "𝓍": {…},
+      "𝒇": {…},
       …
     }
   field_title: |
