@@ -17,11 +17,11 @@ feature_examples:
     "type": "string"
   optional_boolean: |
     "type": ["boolean", "null"]
+  optional_iso_date: |
+    "type": ["string", "null"],
+    "format": "date"
   controlled_list: |
     "enum": [𝓍, 𝓎, 𝓏]
-  iso_date: |
-    "type": "string",
-    "format": "date"
   example:
   - |
     "examples": [𝓍]

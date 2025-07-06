@@ -10,7 +10,7 @@ layout: default
     <table class="datatable">
       <thead>
         <tr>
-          <th></th>
+          <th width="90"></th>
           {% for fmt in site.data.formats %}
             <th><a target="_blank" href="{{ fmt[1].url }}"
               >{{ fmt[1].title }}</a></th>
@@ -22,7 +22,7 @@ layout: default
         {% for desc in descriptions %}
           {% assign key = desc[0] %}
           <tr>
-            <td><div class="desc-example">{{ desc[1] }}</div></td>
+            <td width="90"><div class="desc-example">{{ desc[1] }}</div></td>
             {% for fmt in site.data.formats %}
               <td>
                 {% assign egs = fmt[1].feature_examples[key] %}

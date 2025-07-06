@@ -5,6 +5,6 @@ field_title: Field title
 field_description: Field description
 required_string: Required string field
 optional_boolean: Optional boolean field
+optional_iso_date: Optional ISO Date field
 controlled_list: Controlled list field
-iso_date: ISO Date field
 example: Field examples

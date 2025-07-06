@@ -37,10 +37,10 @@ feature_examples:
     "required": true
   optional_boolean: |
     "datatype": "boolean"
-  controlled_list: null
-  iso_date: |
+  optional_iso_date: |
     "datatype": {
       "base": "date",
       "format": "yyyy-M-d"
     }
+  controlled_list: null
   example: null

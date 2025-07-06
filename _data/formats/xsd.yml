@@ -16,16 +16,18 @@ feature_examples:
   required_string: |
     <… type="xs:string"/>
   optional_boolean: |
-    <… type="xs:boolean" minOccurs="0"/>
+    <… type="xs:boolean"
+       minOccurs="0"/>
+  iso_date: |
+    <… type="xs:date"
+       minOccurs="0"/>
   controlled_list: |
     <xs:simpleType name="𝒕">
-      <xs:restriction base="𝒃">
+      <xs:restriction base="…">
         <xs:enumeration value="𝓍"/>
         <xs:enumeration value="𝓎"/>
         <xs:enumeration value="𝓏"/>
       </xs:restriction>
     </xs:simpleType>
     <… type="𝒕">
-  iso_date: |
-    <… type="xs:date"/>
   example: null

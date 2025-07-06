@@ -31,6 +31,8 @@ feature_examples:
     }
   optional_boolean: |
     "type": "boolean"
+  optional_iso_date: |
+    "type": "date"
   controlled_list:
   - |
     "categories": [𝓍, 𝓎, 𝓏]
@@ -40,8 +42,5 @@ feature_examples:
       {"value": 𝓎, "label": "𝒀"},
       {"value": 𝓏, "label": "𝒁"},
     ]
-  iso_date: |
-    "type": "date",
-    "format": "default"
   example: |
     "example": 𝓍

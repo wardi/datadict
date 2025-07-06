@@ -20,11 +20,11 @@ feature_examples:
     comment on column "𝑻"."𝒇"
     is '𝓍';
   required_string: |
-    text not null
+    … text not null
   optional_boolean: |
-    boolean
+    … boolean
+  optional_iso_date: |
+    … date
   controlled_list: |
     check ("𝑻"."𝒇" in (𝓍, 𝓎, 𝓏))
-  iso_date: |
-    date
   example: null
