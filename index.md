@@ -10,8 +10,6 @@ layout: default
     <h1>Data Dictionary Formats</h1>
   </summary>
   <div class="switch-container" id="format-switches">
-    <div class="switch-wrapper">
-    </div>
     {% for fmt in site.data.formats %}
       <div class="switch-wrapper">
         <label class="switch">
