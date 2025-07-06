@@ -5,11 +5,14 @@
 layout: default
 ---
 
-<div class="d-flex gap-3 mb-3" id="format-switches">
+<div class="switch-container" id="format-switches">
   {% for fmt in site.data.formats %}
-    <div class="form-check form-switch">
-      <input class="form-check-input format-switch" type="checkbox" role="switch" id="switch-{{ fmt[0] }}" data-col="{{ forloop.index }}" checked>
-      <label class="form-check-label" for="switch-{{ fmt[0] }}">{{ fmt[1].title }}</label>
+    <div class="switch-wrapper">
+      <label class="switch">
+        <input class="format-switch" type="checkbox" id="switch-{{ fmt[0] }}" data-col="{{ forloop.index }}" checked>
+        <span class="slider"></span>
+      </label>
+      <span class="switch-label">{{ fmt[1].title }}</span>
     </div>
   {% endfor %}
 </div>
