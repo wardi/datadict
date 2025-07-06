@@ -384,13 +384,10 @@
                     }
                 });
             }
-            function updateUrl(state) {
-                var params = new URLSearchParams(window.location.search);
-                Object.entries(state).forEach(function([key, val]) {
-                    params.set(key, val);
-                });
-                var newUrl = window.location.pathname + '?' + params.toString();
-                window.history.replaceState({}, '', newUrl);
+            function updateHash(state) {
+                var enabled = Object.entries(state).filter(function([key, val]) { return val == 1; }).map(function([key, val]) { return key; });
+                var hash = enabled.join(',');
+                window.location.hash = hash;
             }
             function applyColumnVisibility(state) {
                 var keys = getFormatKeys();
@@ -404,15 +401,19 @@
             $('#format-switches .format-switch').on('change', function() {
                 var state = getSwitchState();
                 applyColumnVisibility(state);
-                updateUrl(state);
+                updateHash(state);
             });
-            // On page load: parse URL
-            var params = new URLSearchParams(window.location.search);
+            // On page load: parse hash
+            var keys = getFormatKeys();
             var state = {};
-            getFormatKeys().forEach(function(key) {
-                var val = params.get(key);
-                state[key] = (val === null) ? 1 : parseInt(val);
-            });
+            if (window.location.hash.length > 1) {
+                var enabled = window.location.hash.substring(1).split(',');
+                keys.forEach(function(key) {
+                    state[key] = enabled.includes(key) ? 1 : 0;
+                });
+            } else {
+                keys.forEach(function(key) { state[key] = 1; });
+            }
             setSwitchState(state);
             applyColumnVisibility(state);
         });
