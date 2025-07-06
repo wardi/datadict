@@ -28,8 +28,14 @@ layout: default
                 {% assign egs = fmt[1].feature_examples[key] %}
                 {% for eg in egs %}
                   <div class="example">
-                    <pre><code class="language-{{ fmt[1].example_language }}"
-                      >{{ eg | escape }}</code></pre>
+                    {% assign lang = fmt[1].example_language %}
+                    {%- if lang == 'json' -%}
+                      {% highlight json %}{{ eg }}{% endhighlight %}
+                    {%- elsif lang == 'xml' -%}
+                      {% highlight xml %}{{ eg }}{% endhighlight %}
+                    {%- elsif lang == 'sql' -%}
+                      {% highlight sql %}{{ eg }}{% endhighlight %}
+                    {%- endif -%}
                   </div>
                 {% endfor %}
               </td>
