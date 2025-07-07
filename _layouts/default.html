@@ -285,7 +285,7 @@
           flex-direction: column-reverse;
           align-items: flex-start;
         }
-        
+
         /* Custom Round Sliding Switches */
         .switch-container {
           display: flex;
@@ -377,6 +377,12 @@
 
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/v/dt/dt-2.3.2/fc-5.0.4/fh-4.0.3/datatables.min.js" integrity="sha384-o4WvXlrqghMPkbphh3ogr4bvRyL508yVfar8ZjWjpN2615ehwVIaEn6LeL2FbbfR" crossorigin="anonymous"></script>
+
+    <!-- Default format settings -->
+    <script>
+        var formatDefaults = JSON.parse('{% raw %}{{% endraw %}{% for fmt in site.data.formats %}"{{ fmt[0] }}":{% if fmt[1].default_show %}true{% else %}false{% endif %}{% unless forloop.last %},{% endunless %}{% endfor %}{% raw %}}{% endraw %}');
+    </script>
+
     <script>
         // Initialize DataTables
         $(document).ready(function() {
@@ -444,7 +450,10 @@
                     state[key] = enabled.includes(key) ? 1 : 0;
                 });
             } else {
-                keys.forEach(function(key) { state[key] = 1; });
+                // Use default_show from YAML files when no hash
+                keys.forEach(function(key) {
+                    state[key] = formatDefaults[key] ? 1 : 0;
+                });
             }
             setSwitchState(state);
             applyColumnVisibility(state);
