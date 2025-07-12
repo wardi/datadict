@@ -5,7 +5,13 @@
 layout: default
 ---
 
-<details>
+{% capture defaults -%}
+ {%- for fmt in site.data.formats -%}
+  {%- if fmt[1].default_show %},{{ fmt[0] }}{% endif -%}
+ {%- endfor -%}
+{%- endcapture %}
+
+<details data-default-formats="{{ defaults | remove_first: "," }}">
   <summary>
     <h1>Data Dictionary Formats</h1>
   </summary>
