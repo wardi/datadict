@@ -1,457 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link href="https://cdn.datatables.net/v/dt/dt-2.3.2/fc-5.0.4/fh-4.0.3/datatables.min.css" rel="stylesheet" integrity="sha384-qWmUJBbpWcDORy7M/emkpcHWJBnGB0L40cWmBJ42fr/WCkm9XMMYYI9njNEPXZNA" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <link href="https://cdn.datatables.net/v/dt/dt-2.3.2/fc-5.0.4/fh-4.0.3/datatables.min.css" rel="stylesheet" integrity="sha384-qWmUJBbpWcDORy7M/emkpcHWJBnGB0L40cWmBJ42fr/WCkm9XMMYYI9njNEPXZNA" crossorigin="anonymous">
 
-    <style>
-        :root {
-            --bg: #ffffff;
-            --bg-secondary: #eeeeee;
-            --text: #222;
-            --text-secondary: #444;
-            --border: #e0e0e0;
-            --accent: #667eea;
-            --accent-hover: #5a67d8;
-            --table-header: #f0f0f0;
-            --table-row-hover: #f5f5f5;
-            --code-bg: #f5f5f5;
-            --color: #000;
-            --textShadow: #fff;
-            --comment: #6e6e6e;
-            --punctuation: #4e4e4e;
-            --property: #905;
-            --operator: #70b;
-            --selector: #487b00;
-            --url: #8d6640;
-            --urlBg: hsla(0, 0%, 100%, .5);
-            --boolean: #905;
-            --atrule: #0075a8;
-            --keyword: #0075a8;
-            --function: #c93654;
-            --regex: #860;
-            --boxShadow: hsla(0,0%,0%,.3);
-            --focusOutline: hsla(214, 100%, 85%, 1);
-        }
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-secondary: #eeeeee;
+      --text: #222;
+      --text-secondary: #444;
+      --border: #e0e0e0;
+      --accent: #667eea;
+      --accent-hover: #5a67d8;
+      --table-header: #f0f0f0;
+      --table-row-hover: #f5f5f5;
+      --code-bg: #f5f5f5;
+      --color: #000;
+      --textShadow: #fff;
+      --comment: #6e6e6e;
+      --punctuation: #4e4e4e;
+      --property: #905;
+      --operator: #70b;
+      --selector: #487b00;
+      --url: #8d6640;
+      --urlBg: hsla(0, 0%, 100%, .5);
+      --boolean: #905;
+      --atrule: #0075a8;
+      --keyword: #0075a8;
+      --function: #c93654;
+      --regex: #860;
+      --boxShadow: hsla(0,0%,0%,.3);
+      --focusOutline: hsla(214, 100%, 85%, 1);
+    }
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #1a1a1a;
-                --bg-secondary: #2d3748;
-                --text: #e0e0e0;
-                --text-secondary: #a0aec0;
-                --border: #4a5568;
-                --accent: #63b3ed;
-                --accent-hover: #3182ce;
-                --table-header: #4a5568;
-                --table-row-hover: #2d3748;
-                --code-bg: #1a1a1a;
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a1a;
+        --bg-secondary: #2d3748;
+        --text: #e0e0e0;
+        --text-secondary: #a0aec0;
+        --border: #4a5568;
+        --accent: #63b3ed;
+        --accent-hover: #3182ce;
+        --table-header: #4a5568;
+        --table-row-hover: #2d3748;
+        --code-bg: #1a1a1a;
 
-                --color: #e3eaf2;
-                --textShadow: #000;
-                --comment: #8da1b9;
-                --punctuation: #e3eaf2;
-                --property: #6cb8e6;
-                --operator: #e9ae7e;
-                --selector: #66cccc;
-                --url: #91d076;
-                --urlBg: rgba(0,0,0,.5);
-                --boolean: #e6d37a;
-                --atrule: #e9ae7e;
-                --keyword: #e9ae7e;
-                --function: #c699e3;
-                --regex: #f4adf4;
-                --boxShadow: #000;
-                --focusOutline: hsla(214, 100%, 85%, .6);
-            }
-        }
-        a {
-          color: var(--function);
-        }
-        figure {
-          margin: 0;
-        }
-        code[class*="language-"],
-        pre[class*="language-"] {
-          color: var(--color);
-          text-shadow: 0 1px var(--textShadow);
-        }
+        --color: #e3eaf2;
+        --textShadow: #000;
+        --comment: #8da1b9;
+        --punctuation: #e3eaf2;
+        --property: #6cb8e6;
+        --operator: #e9ae7e;
+        --selector: #66cccc;
+        --url: #91d076;
+        --urlBg: rgba(0,0,0,.5);
+        --boolean: #e6d37a;
+        --atrule: #e9ae7e;
+        --keyword: #e9ae7e;
+        --function: #c699e3;
+        --regex: #f4adf4;
+        --boxShadow: #000;
+        --focusOutline: hsla(214, 100%, 85%, .6);
+      }
+    }
+    a {
+      color: var(--function);
+    }
+    figure {
+      margin: 0;
+    }
+    code[class*="language-"],
+    pre[class*="language-"] {
+      color: var(--color);
+      text-shadow: 0 1px var(--textShadow);
+    }
 
-        /* Background image is applied to the pre element on blocks, mainly because it is cropped when applied to the code element. */
-        :not(pre) > code[class*="language-"],
-        pre[class*="language-"] {
-          background-image: var(--codeBgImg);
-        }
-        pre[class*="language-"]:hover,
-        pre[class*="language-"]:focus-within {
-          box-shadow: 0 .25rem .25rem var(--boxShadow);
-        }
-        pre[class*="language-"]:focus-within {
-          outline-offset: calc(-0.25rem - 1px);
-          outline: var(--focusOutline) solid 0.25rem;
-          z-index: 5;
-        }
+    /* Background image is applied to the pre element on blocks, mainly because it is cropped when applied to the code element. */
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+      background-image: var(--codeBgImg);
+    }
+    pre[class*="language-"]:hover,
+    pre[class*="language-"]:focus-within {
+      box-shadow: 0 .25rem .25rem var(--boxShadow);
+    }
+    pre[class*="language-"]:focus-within {
+      outline-offset: calc(-0.25rem - 1px);
+      outline: var(--focusOutline) solid 0.25rem;
+      z-index: 5;
+    }
 
-        .highlight pre { background-color: var(--code-bg); }
-        .highlight .hll { background-color: var(--code-bg); }
-        .highlight .c { color: var(--comment); } /* Comment */
-        .highlight .k { color: var(--keyword); } /* Keyword */
-        .highlight .l { color: var(--selector); } /* Literal */
-        .highlight .n { color: var(--selector); } /* Name */
-        .highlight .o { color: var(--operator); } /* Operator */
-        .highlight .p { color: var(--punctuation); } /* Punctuation */
-        .highlight .cm { color: var(--comment); } /* Comment.Multiline */
-        .highlight .cp { color: var(--comment); } /* Comment.Preproc */
-        .highlight .c1 { color: var(--comment); } /* Comment.Single */
-        .highlight .cs { color: var(--comment); } /* Comment.Special */
-        .highlight .ge { font-style: italic } /* Generic.Emph */
-        .highlight .gs { font-weight: bold } /* Generic.Strong */
-        .highlight .kc { color: var(--keyword); } /* Keyword.Constant */
-        .highlight .kd { color: var(--keyword); } /* Keyword.Declaration */
-        .highlight .kn { color: var(--keyword); } /* Keyword.Namespace */
-        .highlight .kp { color: var(--keyword); } /* Keyword.Pseudo */
-        .highlight .kr { color: var(--keyword); } /* Keyword.Reserved */
-        .highlight .kt { color: var(--keyword); } /* Keyword.Type */
-        .highlight .ld { color: var(--boolean); } /* Literal.Date */
-        .highlight .m { color: var(--boolean); } /* Literal.Number */
-        .highlight .s { color: var(--boolean); } /* Literal.String */
-        .highlight .na { color: var(--property); } /* Name.Attribute */
-        .highlight .nb { color: var(--property); } /* Name.Builtin */
-        .highlight .nc { color: var(--property); } /* Name.Class */
-        .highlight .no { color: var(--property); } /* Name.Constant */
-        .highlight .nd { color: var(--property); } /* Name.Decorator */
-        .highlight .ni { color: var(--property); } /* Name.Entity */
-        .highlight .ne { color: var(--property); } /* Name.Exception */
-        .highlight .nf { color: var(--property); } /* Name.Function */
-        .highlight .nl { color: var(--property); } /* Name.Label */
-        .highlight .nn { color: var(--property); } /* Name.Namespace */
-        .highlight .nx { color: var(--property); } /* Name.Other */
-        .highlight .py { color: var(--property); } /* Name.Property */
-        .highlight .nt { color: var(--property); } /* Name.Tag */
-        .highlight .nv { color: var(--property); } /* Name.Variable */
-        .highlight .ow { color: var(--operator); } /* Operator.Word */
-        .highlight .w {} /* Text.Whitespace */
-        .highlight .mf { color: var(--boolean); } /* Literal.Number.Float */
-        .highlight .mh { color: var(--boolean); } /* Literal.Number.Hex */
-        .highlight .mi { color: var(--boolean); } /* Literal.Number.Integer */
-        .highlight .mo { color: var(--boolean); } /* Literal.Number.Oct */
-        .highlight .sb { color: var(--selector); } /* Literal.String.Backtick */
-        .highlight .sc { color: var(--selector); } /* Literal.String.Char */
-        .highlight .sd { color: var(--selector); } /* Literal.String.Doc */
-        .highlight .s2 { color: var(--selector); } /* Literal.String.Double */
-        .highlight .se { color: var(--selector); } /* Literal.String.Escape */
-        .highlight .sh { color: var(--selector); } /* Literal.String.Heredoc */
-        .highlight .si { color: var(--selector); } /* Literal.String.Interpol */
-        .highlight .sx { color: var(--selector); } /* Literal.String.Other */
-        .highlight .sr { color: var(--regex); } /* Literal.String.Regex */
-        .highlight .s1 { color: var(--selector); } /* Literal.String.Single */
-        .highlight .ss { color: var(--selector); } /* Literal.String.Symbol */
-        .highlight .bp { color: var(--function); } /* Name.Builtin.Pseudo */
-        .highlight .vc { color: var(--function); } /* Name.Variable.Class */
-        .highlight .vg { color: var(--function); } /* Name.Variable.Global */
-        .highlight .vi { color: var(--function); } /* Name.Variable.Instance */
-        .highlight .il { color: var(--boolean); } /* Literal.Number.Integer.Long */
+    .highlight pre { background-color: var(--code-bg); }
+    .highlight .hll { background-color: var(--code-bg); }
+    .highlight .c { color: var(--comment); } /* Comment */
+    .highlight .k { color: var(--keyword); } /* Keyword */
+    .highlight .l { color: var(--selector); } /* Literal */
+    .highlight .n { color: var(--selector); } /* Name */
+    .highlight .o { color: var(--operator); } /* Operator */
+    .highlight .p { color: var(--punctuation); } /* Punctuation */
+    .highlight .cm { color: var(--comment); } /* Comment.Multiline */
+    .highlight .cp { color: var(--comment); } /* Comment.Preproc */
+    .highlight .c1 { color: var(--comment); } /* Comment.Single */
+    .highlight .cs { color: var(--comment); } /* Comment.Special */
+    .highlight .ge { font-style: italic } /* Generic.Emph */
+    .highlight .gs { font-weight: bold } /* Generic.Strong */
+    .highlight .kc { color: var(--keyword); } /* Keyword.Constant */
+    .highlight .kd { color: var(--keyword); } /* Keyword.Declaration */
+    .highlight .kn { color: var(--keyword); } /* Keyword.Namespace */
+    .highlight .kp { color: var(--keyword); } /* Keyword.Pseudo */
+    .highlight .kr { color: var(--keyword); } /* Keyword.Reserved */
+    .highlight .kt { color: var(--keyword); } /* Keyword.Type */
+    .highlight .ld { color: var(--boolean); } /* Literal.Date */
+    .highlight .m { color: var(--boolean); } /* Literal.Number */
+    .highlight .s { color: var(--boolean); } /* Literal.String */
+    .highlight .na { color: var(--property); } /* Name.Attribute */
+    .highlight .nb { color: var(--property); } /* Name.Builtin */
+    .highlight .nc { color: var(--property); } /* Name.Class */
+    .highlight .no { color: var(--property); } /* Name.Constant */
+    .highlight .nd { color: var(--property); } /* Name.Decorator */
+    .highlight .ni { color: var(--property); } /* Name.Entity */
+    .highlight .ne { color: var(--property); } /* Name.Exception */
+    .highlight .nf { color: var(--property); } /* Name.Function */
+    .highlight .nl { color: var(--property); } /* Name.Label */
+    .highlight .nn { color: var(--property); } /* Name.Namespace */
+    .highlight .nx { color: var(--property); } /* Name.Other */
+    .highlight .py { color: var(--property); } /* Name.Property */
+    .highlight .nt { color: var(--property); } /* Name.Tag */
+    .highlight .nv { color: var(--property); } /* Name.Variable */
+    .highlight .ow { color: var(--operator); } /* Operator.Word */
+    .highlight .w {} /* Text.Whitespace */
+    .highlight .mf { color: var(--boolean); } /* Literal.Number.Float */
+    .highlight .mh { color: var(--boolean); } /* Literal.Number.Hex */
+    .highlight .mi { color: var(--boolean); } /* Literal.Number.Integer */
+    .highlight .mo { color: var(--boolean); } /* Literal.Number.Oct */
+    .highlight .sb { color: var(--selector); } /* Literal.String.Backtick */
+    .highlight .sc { color: var(--selector); } /* Literal.String.Char */
+    .highlight .sd { color: var(--selector); } /* Literal.String.Doc */
+    .highlight .s2 { color: var(--selector); } /* Literal.String.Double */
+    .highlight .se { color: var(--selector); } /* Literal.String.Escape */
+    .highlight .sh { color: var(--selector); } /* Literal.String.Heredoc */
+    .highlight .si { color: var(--selector); } /* Literal.String.Interpol */
+    .highlight .sx { color: var(--selector); } /* Literal.String.Other */
+    .highlight .sr { color: var(--regex); } /* Literal.String.Regex */
+    .highlight .s1 { color: var(--selector); } /* Literal.String.Single */
+    .highlight .ss { color: var(--selector); } /* Literal.String.Symbol */
+    .highlight .bp { color: var(--function); } /* Name.Builtin.Pseudo */
+    .highlight .vc { color: var(--function); } /* Name.Variable.Class */
+    .highlight .vg { color: var(--function); } /* Name.Variable.Global */
+    .highlight .vi { color: var(--function); } /* Name.Variable.Instance */
+    .highlight .il { color: var(--boolean); } /* Literal.Number.Integer.Long */
 
-        .highlight .gh { } /* Generic Heading & Diff Header */
-        .highlight .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
-        .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
-        .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
+    .highlight .gh { } /* Generic Heading & Diff Header */
+    .highlight .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
+    .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
+    .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 
-        @media print {
-          code[class*="language-"],
-          pre[class*="language-"] {
-            text-shadow: none;
-          }
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
-            color: var(--text);
-            overflow-x: hidden;
-        }
-        html {
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 100%;
-            margin: 0;
-            padding: 0 10px;
-        }
-        .datatable-container {
-            background: var(--bg-secondary);
-            border-radius: 8px;
-        }
-        .datatable-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid #4a5568;
-            background: #2d3748;
-        }
-        .datatable-header h2 {
-            margin: 0;
-            color: #e0e0e0;
-            font-weight: 500;
-        }
-        .datatable-header p {
-            color: #a0aec0;
-            margin: 0.5rem 0 0 0;
-        }
-        .datatable-content {
-            padding: 0;
-        }
-        /* DataTables customization for dark theme */
-        .dataTables_wrapper {
-            padding: 0.5rem;
-            background: var(--bg-secondary);
-        }
-        /* Dark theme for DataTables */
-        .dataTable,
-        table.dataTable thead tr > .dtfc-fixed-start,
-        table.dataTable tbody tr > .dtfc-fixed-start {
-            background: var(--bg-secondary);
-            color: var(--text);
-        }
-        .dataTable > tbody > tr > td {
-            vertical-align: top;
-        }
-        .dataTable thead th {
-            background: var(--table-header);
-            color: var(--text);
-            border-bottom: 2px solid var(--accent);
-            padding: 0.4em 0.6em;
-        }
-        .dataTable tbody td {
-            color: var(--text);
-            padding: 0.3em 0.5em;
-        }
-        table.dataTable.display > tbody > tr > td {
-          border: none;
-        }
-        .dataTable tbody tr:hover {
-            background: var(--table-row-hover);
-        }
-        /* syntax highlighting container */
-        .example {
-            background: var(--code-bg);
-            border-radius: 6px;
-            margin: 0.3rem 0;
-            overflow: hidden;
-            border: 1px solid var(--border);
-        }
-        .example pre {
-            margin: 0;
-            padding: 0.5em 0.7em;
-            font-size: 13px;
-            line-height: 1.5;
-            background: var(--code-bg);
-        }
-        /* Dark theme for buttons */
-        .dt-buttons .dt-button {
-            background: var(--table-header);
-            color: var(--text);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-        }
-        .dt-buttons .dt-button:hover {
-            background: var(--accent);
-            color: var(--bg);
-            border-color: var(--accent);
-        }
-        summary {
-          margin: 0.5em 0;
-        }
-        h1 {
-            font-size: 130%;
-            display: inline;
-        }
-        /* Dark theme for info text */
-        .dataTables_info {
-            color: var(--text-secondary);
-        }
-        .desc-example {
-            margin: 0.3rem 0.3rem 0.3rem 0;
-            font-size: 80%;
-        }
-        .datatable {
-            width: 100%;
-            border-collapse: collapse;
-            table-layout: auto;
-        }
-        table.dataTable > tbody > tr > td.dtr-control {
-          display: flex;
-          flex-direction: column-reverse;
-          align-items: flex-start;
-        }
+    @media print {
+      code[class*="language-"],
+      pre[class*="language-"] {
+      text-shadow: none;
+      }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+    html {
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 100%;
+      margin: 0;
+      padding: 0 10px;
+    }
+    .datatable-container {
+      background: var(--bg-secondary);
+      border-radius: 8px;
+    }
+    .datatable-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid #4a5568;
+      background: #2d3748;
+    }
+    .datatable-header h2 {
+      margin: 0;
+      color: #e0e0e0;
+      font-weight: 500;
+    }
+    .datatable-header p {
+      color: #a0aec0;
+      margin: 0.5rem 0 0 0;
+    }
+    .datatable-content {
+      padding: 0;
+    }
+    /* DataTables customization for dark theme */
+    .dataTables_wrapper {
+      padding: 0.5rem;
+      background: var(--bg-secondary);
+    }
+    /* Dark theme for DataTables */
+    .dataTable,
+    table.dataTable thead tr > .dtfc-fixed-start,
+    table.dataTable tbody tr > .dtfc-fixed-start {
+      background: var(--bg-secondary);
+      color: var(--text);
+    }
+    .dataTable > tbody > tr > td {
+      vertical-align: top;
+    }
+    .dataTable thead th {
+      background: var(--table-header);
+      color: var(--text);
+      border-bottom: 2px solid var(--accent);
+      padding: 0.4em 0.6em;
+    }
+    .dataTable tbody td {
+      color: var(--text);
+      padding: 0.3em 0.5em;
+    }
+    table.dataTable.display > tbody > tr > td {
+      border: none;
+    }
+    .dataTable tbody tr:hover {
+      background: var(--table-row-hover);
+    }
+    /* syntax highlighting container */
+    .example {
+      background: var(--code-bg);
+      border-radius: 6px;
+      margin: 0.3rem 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .example pre {
+      margin: 0;
+      padding: 0.5em 0.7em;
+      font-size: 13px;
+      line-height: 1.5;
+      background: var(--code-bg);
+    }
+    /* Dark theme for buttons */
+    .dt-buttons .dt-button {
+      background: var(--table-header);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    .dt-buttons .dt-button:hover {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+    summary {
+      margin: 0.5em 0;
+    }
+    h1 {
+      font-size: 130%;
+      display: inline;
+    }
+    /* Dark theme for info text */
+    .dataTables_info {
+      color: var(--text-secondary);
+    }
+    .desc-example {
+      margin: 0.3rem 0.3rem 0.3rem 0;
+      font-size: 80%;
+    }
+    .datatable {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: auto;
+    }
+    table.dataTable > tbody > tr > td.dtr-control {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
 
-        /* Custom Round Sliding Switches */
-        .switch-container {
-          display: flex;
-          gap: 1rem;
-          margin-bottom: 1rem;
-          flex-wrap: wrap;
-        }
-        .switch-wrapper {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-        .switch {
-          position: relative;
-          display: inline-block;
-          width: 50px;
-          height: 24px;
-        }
-        .switch input {
-          opacity: 0;
-          width: 0;
-          height: 0;
-        }
-        .slider {
-          position: absolute;
-          cursor: pointer;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: var(--border);
-          transition: 0.3s;
-          border-radius: 24px;
-        }
-        .slider:before {
-          position: absolute;
-          content: "";
-          height: 18px;
-          width: 18px;
-          left: 3px;
-          bottom: 3px;
-          background-color: var(--bg);
-          transition: 0.3s;
-          border-radius: 50%;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        input:checked + .slider {
-          background-color: var(--accent);
-        }
-        input:checked + .slider:before {
-          transform: translateX(26px);
-        }
-        .switch-label {
-          font-size: 0.9rem;
-          color: var(--text);
-          font-weight: 500;
-        }
-        footer {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 1rem;
-          margin-bottom: 1rem;
-          flex-wrap: wrap;
-        }
-        footer div {
-          display: flex;
-          gap: 0.5rem;
-        }
-    </style>
+    /* Custom Round Sliding Switches */
+    .switch-container {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--border);
+      transition: 0.3s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: var(--bg);
+      transition: 0.3s;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    input:checked + .slider {
+      background-color: var(--accent);
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    .switch-label {
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    footer div {
+      display: flex;
+      gap: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="container" id="main-container">
-        {{ content }}
+  <div class="container" id="main-container">
+    {{ content }}
+  </div>
+  <footer>
+    <div>
+    <a href="https://github.com/wardi/datadict" target="_blank" style="color: var(--accent); text-decoration: none;">
+      Report a bug or make a suggestion
+    </a>
     </div>
-    <footer>
-      <div>
-        <a href="https://github.com/wardi/datadict" target="_blank" style="color: var(--accent); text-decoration: none;">
-            Report a bug or make a suggestion
-        </a>
-      </div>
-      <div>
-        This page is maintained by <a href="https://excess.org" target="_blank" style="color: var(--accent); text-decoration: none;">Ian Ward</a>
-      </div>
-    </footer>
+    <div>
+    This page is maintained by <a href="https://excess.org" target="_blank" style="color: var(--accent); text-decoration: none;">Ian Ward</a>
+    </div>
+  </footer>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/v/dt/dt-2.3.2/fc-5.0.4/fh-4.0.3/datatables.min.js" integrity="sha384-o4WvXlrqghMPkbphh3ogr4bvRyL508yVfar8ZjWjpN2615ehwVIaEn6LeL2FbbfR" crossorigin="anonymous"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/v/dt/dt-2.3.2/fc-5.0.4/fh-4.0.3/datatables.min.js" integrity="sha384-o4WvXlrqghMPkbphh3ogr4bvRyL508yVfar8ZjWjpN2615ehwVIaEn6LeL2FbbfR" crossorigin="anonymous"></script>
 
-    <script>
-        // Initialize DataTables
-        $(document).ready(function() {
-            var dt = $('.datatable').DataTable({
-                scrollX: true,
-                pageLength: 25,
-                ordering: false,
-                searching: false,
-                paging: false,
-                info: false,
-                stripeClasses: [],
-                fixedHeader: true,
-                fixedColumns: true,
-            });
+  <script>
+    // Initialize DataTables
+    $(document).ready(function() {
+      var dt = $('.datatable').DataTable({
+        scrollX: true,
+        pageLength: 25,
+        ordering: false,
+        searching: false,
+        paging: false,
+        info: false,
+        stripeClasses: [],
+        fixedHeader: true,
+        fixedColumns: true,
+      });
 
-            // --- Format Switches Logic ---
-            function getFormatKeys() {
-                var keys = [];
-                $('#format-switches .format-switch').each(function() {
-                    keys.push($(this).attr('id').replace('switch-', ''));
-                });
-                return keys;
-            }
-            function getSwitchState() {
-                var state = {};
-                $('#format-switches .format-switch').each(function() {
-                    var key = $(this).attr('id').replace('switch-', '');
-                    state[key] = $(this).is(':checked') ? 1 : 0;
-                });
-                return state;
-            }
-            function setSwitchState(state) {
-                $('#format-switches .format-switch').each(function() {
-                    var key = $(this).attr('id').replace('switch-', '');
-                    if (typeof state[key] !== 'undefined') {
-                        $(this).prop('checked', state[key] == 1);
-                    }
-                });
-            }
-            function updateHash(state) {
-                var enabled = Object.entries(state).filter(function([key, val]) { return val == 1; }).map(function([key, val]) { return key; });
-                var hash = enabled.join(',');
-                window.location.hash = hash;
-            }
-            function applyColumnVisibility(state) {
-                var keys = getFormatKeys();
-                keys.forEach(function(key, idx) {
-                    var colIdx = idx + 1; // skip first column (feature)
-                    var visible = state[key] == 1;
-                    dt.column(colIdx).visible(visible);
-                });
-            }
-            // On switch change
-            $('#format-switches .format-switch').on('change', function() {
-                var state = getSwitchState();
-                applyColumnVisibility(state);
-                updateHash(state);
-            });
-            // On page load: parse hash
-            var keys = getFormatKeys();
-            var state = {};
-            if (window.location.hash.length > 1) {
-                var enabled = window.location.hash.substring(1).split(',');
-            } else {
-                var defaultFormats = $('details[data-default-formats]').attr('data-default-formats') || '';
-                var enabled = defaultFormats.split(',').filter(Boolean);
-                $('details').attr('open', '');
-            }
-            keys.forEach(function(key) {
-                state[key] = enabled.includes(key) ? 1 : 0;
-            });
-            setSwitchState(state);
-            applyColumnVisibility(state);
+      // --- Format Switches Logic ---
+      function getFormatKeys() {
+        var keys = [];
+        $('#format-switches .format-switch').each(function() {
+          keys.push($(this).attr('id').replace('switch-', ''));
         });
-    </script>
+        return keys;
+      }
+      function getSwitchState() {
+        var state = {};
+        $('#format-switches .format-switch').each(function() {
+          var key = $(this).attr('id').replace('switch-', '');
+          state[key] = $(this).is(':checked') ? 1 : 0;
+        });
+        return state;
+      }
+      function setSwitchState(state) {
+        $('#format-switches .format-switch').each(function() {
+          var key = $(this).attr('id').replace('switch-', '');
+          if (typeof state[key] !== 'undefined') {
+            $(this).prop('checked', state[key] == 1);
+          }
+        });
+      }
+      function updateHash(state) {
+        var enabled = Object.entries(state).filter(function([key, val]) { return val == 1; }).map(function([key, val]) { return key; });
+        var hash = enabled.join(',');
+        window.location.hash = hash;
+      }
+      function applyColumnVisibility(state) {
+        var keys = getFormatKeys();
+        keys.forEach(function(key, idx) {
+          var colIdx = idx + 1; // skip first column (feature)
+          var visible = state[key] == 1;
+          dt.column(colIdx).visible(visible);
+        });
+      }
+      // On switch change
+      $('#format-switches .format-switch').on('change', function() {
+        var state = getSwitchState();
+        applyColumnVisibility(state);
+        updateHash(state);
+      });
+      // On page load: parse hash
+      var keys = getFormatKeys();
+      var state = {};
+      if (window.location.hash.length > 1) {
+        var enabled = window.location.hash.substring(1).split(',');
+      } else {
+        var defaultFormats = $('details[data-default-formats]').attr('data-default-formats') || '';
+        var enabled = defaultFormats.split(',').filter(Boolean);
+        $('details').attr('open', '');
+      }
+      keys.forEach(function(key) {
+        state[key] = enabled.includes(key) ? 1 : 0;
+      });
+      setSwitchState(state);
+      applyColumnVisibility(state);
+    });
+  </script>
 </body>
 </html>
