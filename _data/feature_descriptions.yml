@@ -3,8 +3,11 @@ foreign_keys: Foreign keys
 fields: Fields and names
 field_title: Field title
 field_description: Field description
-required_string: Required string field
-optional_boolean: Optional boolean field
-optional_iso_date: Optional ISO Date field
+string: String field
+boolean: Boolean field
+iso_date: ISO Date field
 controlled_list: Controlled list field
+null_yes: Null allowed
+null_no: Null disallowed
+multiple: Multiple values
 example: Field examples

@@ -19,12 +19,18 @@ feature_examples:
   field_description: |
     comment on column "𝑻"."𝒇"
     is '𝓍';
-  required_string: |
-    … text not null
-  optional_boolean: |
+  string: |
+    … text
+  boolean: |
     … boolean
-  optional_iso_date: |
+  iso_date: |
     … date
   controlled_list: |
     check ("𝑻"."𝒇" in (𝓍, 𝓎, 𝓏))
+  null_yes:
+    html: default
+  null_no: |
+    … not null
+  multiple: |
+    … 𝒕[]
   example: null

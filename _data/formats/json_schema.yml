@@ -14,15 +14,24 @@ feature_examples:
     "title": "𝓍"
   description: |
     "description": "𝓍"
-  required_string: |
+  string: |
     "type": "string"
-  optional_boolean: |
-    "type": ["boolean", "null"]
-  optional_iso_date: |
-    "type": ["string", "null"],
+  boolean: |
+    "type": "boolean"
+  iso_date: |
+    "type": "string",
     "format": "date"
   controlled_list: |
     "enum": [𝓍, 𝓎, 𝓏]
+  null_yes: |
+    "type": [𝒕, "null"]
+  null_no:
+    html: default
+  multiple: |
+    "type": "array",
+    "items": {
+      "type": 𝒕
+    }
   example:
   - |
     "examples": [𝓍]

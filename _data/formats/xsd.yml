@@ -7,20 +7,28 @@ feature_examples:
   fields: |
     <xs:element name="𝒇" …/>
   field_title: null
-  field_description: |
+  field_description:
+  - |
     <xs:annotation>
       <xs:documentation>
         𝓍
       </xs:documentation>
     </xs:annotation>
-  required_string: |
+  - |
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        𝓍
+      </xs:documentation>
+      <xs:documentation xml:lang="fr">
+        𝓎
+      </xs:documentation>
+    </xs:annotation>
+  string: |
     <xs:element … type="xs:string"/>
-  optional_boolean: |
-    <xs:element … type="xs:boolean"
-     minOccurs="0"/>
+  boolean: |
+    <xs:element … type="xs:boolean"/>
   iso_date: |
-    <xs:element … type="xs:date"
-     minOccurs="0"/>
+    <xs:element … type="xs:date"/>
   controlled_list: |
     <xs:simpleType name="𝒕">
       <xs:restriction base="…">
@@ -30,4 +38,10 @@ feature_examples:
       </xs:restriction>
     </xs:simpleType>
     <xs:element … type="𝒕">
+  null_yes: |
+    <xs:element … minOccurs="0"/>
+  null_no:
+    html: default
+  multiple: |
+    <xs:element … maxOccurs="unbounded"/>
   example: null

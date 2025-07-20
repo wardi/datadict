@@ -25,14 +25,11 @@ feature_examples:
     "title": "𝓍"
   field_description: |
     "description": "𝓍"
-  required_string: |
+  string: |
     "type": "string",
-    "constraints": {
-      "required": true
-    }
-  optional_boolean: |
+  boolean: |
     "type": "boolean"
-  optional_iso_date: |
+  iso_date: |
     "type": "date"
   controlled_list:
   - |
@@ -43,5 +40,12 @@ feature_examples:
       {"value": 𝓎, "label": "𝒀"},
       {"value": 𝓏, "label": "𝒁"},
     ]
+  null_yes:
+    html: default
+  null_no: |
+    "constraints": {
+      "required": true
+    }
+  multiple: null
   example: |
     "example": 𝓍

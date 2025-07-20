@@ -33,15 +33,19 @@ feature_examples:
     }
   field_description: |
     "dc:description": "𝓍"
-  required_string: |
-    "datatype": "string",
-    "required": true
-  optional_boolean: |
+  string: |
+    "datatype": "string"
+  boolean: |
     "datatype": "boolean"
-  optional_iso_date: |
+  iso_date: |
     "datatype": {
       "base": "date",
       "format": "yyyy-M-d"
     }
   controlled_list: null
+  null_yes:
+    html: default
+  null_no: |
+    "required": true
+  multiple: null
   example: null
