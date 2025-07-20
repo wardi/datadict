@@ -40,6 +40,10 @@ feature_examples:
       {"value": 𝓎, "label": "𝒀"},
       {"value": 𝓏, "label": "𝒁"},
     ]
+  - |
+    "constraints": {
+      "enum": [𝓍, 𝓎, 𝓏]
+    }
   null_yes:
     html: default
   null_no: |
