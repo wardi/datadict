@@ -33,9 +33,7 @@ feature_examples:
     html: default
   multiple: |
     "type": "array",
-    "items": {
-      "type": 𝒕
-    }
+    "items": {"type": 𝒕}
   example:
   - |
     "examples": [𝓍]

@@ -266,7 +266,6 @@
     }
     h1 {
       font-size: 130%;
-      display: inline;
     }
     label {
       cursor: pointer;
@@ -294,7 +293,7 @@
     .switch-container {
       display: flex;
       gap: 1rem;
-      margin-bottom: 1rem;
+      margin: 1rem;
       flex-wrap: wrap;
     }
     .switch-wrapper {
@@ -448,7 +447,6 @@
       } else {
         var defaultFormats = $('details[data-default-formats]').attr('data-default-formats') || '';
         var enabled = defaultFormats.split(',').filter(Boolean);
-        $('details').attr('open', '');
       }
       keys.forEach(function(key) {
         state[key] = enabled.includes(key) ? 1 : 0;
