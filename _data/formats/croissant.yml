@@ -1,0 +1,87 @@
+title: Croissant
+url: https://docs.mlcommons.org/croissant/docs/croissant-spec.html
+example_language: json
+default_show: false
+feature_examples:
+  primary_key: |
+    "key": {"@id": "𝑻/𝓍"}
+  foreign_keys:
+  - html: defined at the <code>field</code> level
+  - |
+    "references": {
+      "@id": "𝓎/𝓏"
+    },
+  fields: |
+    "field": [
+      {
+        "@type": "cr:Field",
+        "@id": "𝑻/𝒇",
+        …
+      },
+      …
+    ]
+  field_title: |
+    "name": "𝓍"
+  field_description: |
+    "description": "𝓍"
+  string: |
+    "dataType": "sc:Text"
+  integer: |
+    "dataType": "sc:Integer"
+  float: |
+    "dataType": "sc:Float"
+  boolean: |
+    "dataType": "sc:Boolean"
+  iso_date: |
+    "dataType": "sc:Date"
+  controlled_list: |
+    {
+      "@type": "cr:RecordSet",
+      "@id": "𝒕",
+      "key": {
+        "@id": "𝒕/𝒌"
+      }
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "𝒕/𝒌",
+          "dataType": "𝒌ₜ"
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "𝒕/𝒗",
+          "dataType": "𝒗ₜ",
+        }
+      ],
+      "data": [
+        {"𝒕/𝒌": 𝓍, "𝒕/𝒗": 𝑿},
+        {"𝒕/𝒌": 𝓎, "𝒕/𝒗": 𝒀},
+        {"𝒕/𝒌": 𝓏, "𝒕/𝒗": 𝒁}
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      …
+      "field": [
+        {
+          "@type": "cr:Field",
+          …
+          "dataType": "𝒌ₜ",
+          "references": {
+            "@id": "𝒕/𝒌"
+          }
+        },
+        …
+      ]
+    }
+  null_yes: null
+  null_no: null
+  multiple: |
+    "repeated": true
+  example:
+    - html: defined at the <code>RecordSet</code> level
+    - |
+      "examples": [
+        {"𝑻/𝓍": 𝑿₁, "𝑻/𝓎": 𝒀₁},
+        {"𝑻/𝓍": 𝑿₂, "𝑻/𝓎": 𝒀₂}
+      ]
