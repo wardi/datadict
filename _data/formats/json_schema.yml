@@ -16,6 +16,10 @@ feature_examples:
     "description": "𝓍"
   string: |
     "type": "string"
+  integer: |
+    "type": "integer"
+  float: |
+    "type": "number"
   boolean: |
     "type": "boolean"
   iso_date: |

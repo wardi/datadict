@@ -35,6 +35,10 @@ feature_examples:
     "dc:description": "𝓍"
   string: |
     "datatype": "string"
+  integer: |
+    "datatype": "integer"
+  float: |
+    "datatype": "number"
   boolean: |
     "datatype": "boolean"
   iso_date: |

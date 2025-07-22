@@ -26,7 +26,11 @@ feature_examples:
   field_description: |
     "description": "𝓍"
   string: |
-    "type": "string",
+    "type": "string"
+  integer: |
+    "type": "integer"
+  float: |
+    "type": "number"
   boolean: |
     "type": "boolean"
   iso_date: |

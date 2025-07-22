@@ -4,6 +4,8 @@ fields: Fields and names
 field_title: Field title
 field_description: Field description
 string: String field
+integer: Integer field
+float: Decimal field
 boolean: Boolean field
 iso_date: ISO Date field
 controlled_list: Controlled list field

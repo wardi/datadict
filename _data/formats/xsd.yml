@@ -25,6 +25,10 @@ feature_examples:
     </xs:annotation>
   string: |
     <xs:element … type="xs:string"/>
+  integer: |
+    <xs:element … type="xs:integer"/>
+  float: |
+    <xs:element … type="xs:decimal"/>
   boolean: |
     <xs:element … type="xs:boolean"/>
   iso_date: |

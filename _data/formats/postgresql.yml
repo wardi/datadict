@@ -21,6 +21,10 @@ feature_examples:
     is '𝓍';
   string: |
     … text
+  integer: |
+    … integer
+  float: |
+    … numeric
   boolean: |
     … boolean
   iso_date: |
