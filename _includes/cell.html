@@ -1,0 +1,25 @@
+{% if examples.html %}
+  {{ examples.html }}
+{% elsif examples.details %}
+  <details>
+    <summary>{{ examples.summary }}</summary>
+    {% for subeg in examples.details %}
+      {% include example.html eg=subeg %}
+    {% endfor %}
+  </details>
+{% else %}
+  {% for eg in examples %}
+    {% if eg.html %}
+      {{ eg.html }}
+    {% elsif eg.details %}
+      <details>
+        <summary>{{ eg.summary }}</summary>
+        {% for subeg in eg.details %}
+          {% include example.html eg=subeg %}
+        {% endfor %}
+      </details>
+    {% else %}
+      {% include example.html eg=eg %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

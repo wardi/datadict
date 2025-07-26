@@ -34,46 +34,44 @@ feature_examples:
     "dataType": "sc:Boolean"
   iso_date: |
     "dataType": "sc:Date"
-  controlled_list: |
-    {
-      "@type": "cr:RecordSet",
-      "@id": "𝒕",
-      "key": {
-        "@id": "𝒕/𝒌"
-      }
-      "field": [
-        {
-          "@type": "cr:Field",
-          "@id": "𝒕/𝒌",
-          "dataType": "𝒌ₜ"
-        },
-        {
-          "@type": "cr:Field",
-          "@id": "𝒕/𝒗",
-          "dataType": "𝒗ₜ",
-        }
-      ],
-      "data": [
-        {"𝒕/𝒌": 𝓍, "𝒕/𝒗": 𝑿},
-        {"𝒕/𝒌": 𝓎, "𝒕/𝒗": 𝒀},
-        {"𝒕/𝒌": 𝓏, "𝒕/𝒗": 𝒁}
-      ]
-    },
-    {
-      "@type": "cr:RecordSet",
-      …
-      "field": [
-        {
-          "@type": "cr:Field",
-          …
-          "dataType": "𝒌ₜ",
-          "references": {
-            "@id": "𝒕/𝒌"
+  controlled_list:
+    summary:
+      inline data + references
+    details: |
+      {
+        "@type": "cr:RecordSet",
+        "@id": "𝒕",
+        "key": {"@id": "𝒕/𝒌"},
+        "field": [
+          {
+            "@type": "cr:Field",
+            "@id": "𝒕/𝒌",
+            "dataType": "𝒌ₜ"
+          },
+          {
+            "@type": "cr:Field",
+            "@id": "𝒕/𝒗",
+            "dataType": "𝒗ₜ",
           }
-        },
-        …
-      ]
-    }
+        ],
+        "data": [
+          {"𝒕/𝒌": 𝓍, "𝒕/𝒗": 𝑿},
+          {"𝒕/𝒌": 𝓎, "𝒕/𝒗": 𝒀},
+          {"𝒕/𝒌": 𝓏, "𝒕/𝒗": 𝒁}
+        ]
+      },
+      {
+        "@type": "cr:RecordSet",
+        "field": [
+          {
+            "@type": "cr:Field",
+            "dataType": "𝒌ₜ",
+            "references": {
+              "@id": "𝒕/𝒌"
+            }
+          }
+        ]
+      }
   null_yes: null
   null_no: null
   multiple: |

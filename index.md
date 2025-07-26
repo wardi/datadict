@@ -43,28 +43,10 @@ layout: datatable
           <tr>
             <td width="90"><div class="desc-example">{{ desc[1] }}</div></td>
             {% for fmt in site.data.formats %}
+              {% assign lang = fmt[1].example_language %}
               <td>
-                {% assign egs = fmt[1].feature_examples[key] %}
-                {% if egs.html %}
-                  {{ egs.html }}
-                {% else %}
-                  {% for eg in egs %}
-                    {% if eg.html %}
-                      {{ eg.html }}
-                      {% continue %}
-                    {% endif %}
-                    <div class="example">
-                      {% assign lang = fmt[1].example_language %}
-                      {%- if lang == 'json' -%}
-                        {% highlight json %}{{ eg }}{% endhighlight %}
-                      {%- elsif lang == 'xml' -%}
-                        {% highlight xml %}{{ eg }}{% endhighlight %}
-                      {%- elsif lang == 'sql' -%}
-                        {% highlight sql %}{{ eg }}{% endhighlight %}
-                      {%- endif -%}
-                    </div>
-                  {% endfor %}
-                {% endif %}
+                {% assign examples = fmt[1].feature_examples[key] %}
+                {% include cell.html %}
               </td>
             {% endfor %}
           </tr>

@@ -26,11 +26,12 @@ feature_examples:
     "titles": "𝓍"
   - |
     "titles": ["𝓍", "𝓎"]
-  - |
-    "titles": {
-      "en": "𝓍",
-      "fr": ["𝓎", "𝓏"]
-    }
+  - summary: multilingual
+    details: |
+      "titles": {
+        "en": "𝓍",
+        "fr": ["𝓎", "𝓏"]
+      }
   field_description: |
     "dc:description": "𝓍"
   string: |

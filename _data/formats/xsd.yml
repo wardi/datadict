@@ -14,15 +14,16 @@ feature_examples:
         𝓍
       </xs:documentation>
     </xs:annotation>
-  - |
-    <xs:annotation>
-      <xs:documentation xml:lang="en">
-        𝓍
-      </xs:documentation>
-      <xs:documentation xml:lang="fr">
-        𝓎
-      </xs:documentation>
-    </xs:annotation>
+  - summary: multilingual
+    details: |
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+          𝓍
+        </xs:documentation>
+        <xs:documentation xml:lang="fr">
+          𝓎
+        </xs:documentation>
+      </xs:annotation>
   string: |
     <xs:element … type="xs:string"/>
   integer: |
@@ -33,15 +34,17 @@ feature_examples:
     <xs:element … type="xs:boolean"/>
   iso_date: |
     <xs:element … type="xs:date"/>
-  controlled_list: |
-    <xs:simpleType name="𝒕">
-      <xs:restriction base="…">
-        <xs:enumeration value="𝓍"/>
-        <xs:enumeration value="𝓎"/>
-        <xs:enumeration value="𝓏"/>
-      </xs:restriction>
-    </xs:simpleType>
-    <xs:element … type="𝒕">
+  controlled_list:
+    summary: enumeration types
+    details: |
+      <xs:simpleType name="𝒕">
+        <xs:restriction base="…">
+          <xs:enumeration value="𝓍"/>
+          <xs:enumeration value="𝓎"/>
+          <xs:enumeration value="𝓏"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element … type="𝒕">
   null_yes: |
     <xs:element … minOccurs="0"/>
   null_no:
