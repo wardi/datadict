@@ -261,8 +261,57 @@
       border-color: var(--accent);
     }
     summary {
-      margin: 0.5em 0;
+      margin: 0.15em 0;
       cursor: pointer;
+      display: inline-block;
+      padding: 0.2em 1.2em;
+      background: var(--table-header);
+      color: var(--text);
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+      outline: none;
+      margin-top: 0.15em;
+      margin-bottom: 0.15em;
+      margin-left: 0;
+      margin-right: 0;
+      min-width: 120px;
+      text-align: left;
+      /* Match code example width */
+      max-width: 100%;
+      position: relative;
+      padding-left: 2em;
+    }
+    summary::before {
+      content: '\25B6'; /* right-pointing triangle */
+      position: absolute;
+      left: 0.8em;
+      top: 45%;
+      transform: translateY(-55%) rotate(0deg);
+      transition: transform 0.2s;
+      font-size: 1em;
+      color: var(--text-secondary);
+    }
+    details[open] > summary::before {
+      transform: translateY(-50%) rotate(90deg);
+      transition: transform 0.2s;
+    }
+    summary:hover, summary:focus {
+      background: var(--border);
+      color: var(--text);
+    }
+    details {
+      margin: 0.5em 0;
+      /* Align with code example blocks */
+      max-width: 100%;
+    }
+    /* If summary is inside .example, align it visually */
+    .example summary {
+      margin-left: 0.7em;
+      margin-right: 0.7em;
+      min-width: unset;
     }
     h1 {
       font-size: 130%;
