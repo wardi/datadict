@@ -445,7 +445,7 @@
       if (window.location.hash.length > 1) {
         var enabled = window.location.hash.substring(1).split(',');
       } else {
-        var defaultFormats = $('details[data-default-formats]').attr('data-default-formats') || '';
+        var defaultFormats = $('#format-switches').attr('data-default-formats') || '';
         var enabled = defaultFormats.split(',').filter(Boolean);
       }
       keys.forEach(function(key) {

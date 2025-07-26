@@ -12,7 +12,7 @@ layout: datatable
 {%- endcapture %}
 
 <h1>Data Dictionary Formats</h1>
-<div class="switch-container" id="format-switches">
+<div class="switch-container" id="format-switches" data-default-formats="{{ defaults | remove_first: "," }}">
   {% for fmt in site.data.formats %}
     <div class="switch-wrapper">
       <label class="switch">
