@@ -6,12 +6,14 @@ feature_examples:
   preamble:
   - |
     {
-      "@context": "http://www.w3.org/ns/csvw",
+      "@context":
+        "http://www.w3.org/ns/csvw",
       ⋯▽
     }
   - |
     {
-      "@context": "http://www.w3.org/ns/csvw",
+      "@context":
+        "http://www.w3.org/ns/csvw",
       "tables": [{⋯▽}, …]
     }
   source:
