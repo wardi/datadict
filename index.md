@@ -3,6 +3,14 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: datatable
+footer_dl:
+  ⋯▽: defined below
+  𝑻: table name
+  𝒇: field name
+  𝓍, 𝓎, 𝓏, 𝑿, 𝒀, 𝒁: placeholders
+  𝒕: (custom) type name
+  𝒌, 𝒗: key, value field names
+  𝒌ₜ, 𝒗ₜ: key, value field types
 ---
 
 {% capture defaults -%}
@@ -55,4 +63,3 @@ layout: datatable
     </table>
   </div>
 </div>
-

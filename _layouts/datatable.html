@@ -322,6 +322,13 @@
     .description {
       font-size: 80%;
       margin: 0.7em;
+      color: var(--text-secondary);
+    }
+    dl {
+      justify-items: center;
+    }
+    dl dd {
+      margin: 0;
     }
     /* Dark theme for info text */
     .dataTables_info {
@@ -400,16 +407,21 @@
       font-weight: 500;
     }
     footer {
+      margin-bottom: 1rem;
+    }
+    footer div {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1rem;
-      margin-bottom: 1rem;
       flex-wrap: wrap;
     }
-    footer div {
+    footer div div {
       display: flex;
       gap: 0.5rem;
+    }
+    dd {
+      color: var(--text-secondary);
     }
   </style>
 </head>
@@ -418,13 +430,25 @@
     {{ content }}
   </div>
   <footer>
+    <dl>
+      <div>
+        {% for dl in page.footer_dl %}
+          <div>
+            <dt>{{ dl[0] }}</dt>
+            <dd>{{ dl[1] }}</dd>
+          </div>
+        {% endfor %}
+      </div>
+    </dl>
     <div>
-    <a href="https://github.com/wardi/datadict" target="_blank" style="color: var(--accent); text-decoration: none;">
-      Report a bug or make a suggestion
-    </a>
-    </div>
-    <div>
-    This page is maintained by <a href="https://excess.org" target="_blank" style="color: var(--accent); text-decoration: none;">Ian Ward</a>
+      <div>
+        <a href="https://github.com/wardi/datadict" target="_blank">
+          Report a bug or make a suggestion
+        </a>
+      </div>
+      <div>
+        This page is maintained by <a href="https://excess.org" target="_blank">Ian Ward</a>
+      </div>
     </div>
   </footer>
 
