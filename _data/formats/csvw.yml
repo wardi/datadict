@@ -7,12 +7,12 @@ feature_examples:
   - |
     {
       "@context": "http://www.w3.org/ns/csvw",
-      …
+      ⋯▽
     }
   - |
     {
       "@context": "http://www.w3.org/ns/csvw",
-      "tables": [{…}, …]
+      "tables": [{⋯▽}, …]
     }
   source:
   - html: defined at top <em>or</em> <code>tables</code> level
@@ -23,7 +23,7 @@ feature_examples:
   table:
   - html: defined as a sibling of <code>url</code>
   - |
-    "tableSchema": {…},
+    "tableSchema": {⋯▽},
   primary_key:
   - |
     "primaryKey": "𝓍"
@@ -39,7 +39,7 @@ feature_examples:
     }]
   fields: |
     "columns": [
-      {"name": "𝒇", …},
+      {"name": "𝒇", ⋯▽},
       …
     ]
   field_title:

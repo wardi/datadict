@@ -6,7 +6,7 @@ feature_examples:
     <?xml version="1.0" encoding="UTF-8" ?>
     <xs:schema
       xmlns:xs="http://www.w3.org/2001/XMLSchema">
-      …
+      ⋯▽
     </xs:schema>
   source:
   table:
@@ -17,21 +17,25 @@ feature_examples:
   field_title: null
   field_description:
   - |
-    <xs:annotation>
-      <xs:documentation>
-        𝓍
-      </xs:documentation>
-    </xs:annotation>
-  - summary: multilingual
-    details: |
+    <xs:element …/>
       <xs:annotation>
-        <xs:documentation xml:lang="en">
+        <xs:documentation>
           𝓍
         </xs:documentation>
-        <xs:documentation xml:lang="fr">
-          𝓎
-        </xs:documentation>
       </xs:annotation>
+    </xs:element>
+  - summary: multilingual
+    details: |
+      <xs:element …/>
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            𝓍
+          </xs:documentation>
+          <xs:documentation xml:lang="fr">
+            𝓎
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
   string: |
     <xs:element … type="xs:string"/>
   integer: |
@@ -52,7 +56,7 @@ feature_examples:
           <xs:enumeration value="𝓏"/>
         </xs:restriction>
       </xs:simpleType>
-      <xs:element … type="𝒕">
+      <xs:element … type="𝒕"/>
   null_yes: |
     <xs:element … nillable="true"/>
   null_no:

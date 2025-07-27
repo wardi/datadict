@@ -5,18 +5,21 @@ feature_examples:
   preamble: null
   source: null
   table: |
-    create table "𝑻" …;
+    create table "𝑻" ⋯▽;
   primary_key:
+  - html: defined after fields
   - |
     primary key ("𝓍")
   - |
     primary key ("𝓍", "𝓎")
-  foreign_keys: |
+  foreign_keys:
+  - html: defined after fields
+  - |
     foreign key ("𝓍")
     references "𝓎"("𝓏")
   fields: |
     (
-      "𝒇" …,
+      "𝒇" ⋯▽,
       …
     )
   field_title: null
@@ -26,21 +29,23 @@ feature_examples:
     comment on column "𝑻"."𝒇"
     is '𝓍';
   string: |
-    … text
+    text
   integer: |
-    … integer
+    integer
   float: |
-    … numeric
+    numeric
   boolean: |
-    … boolean
+    boolean
   iso_date: |
-    … date
-  controlled_list: |
+    date
+  controlled_list:
+  - html: defined after fields
+  - |
     check ("𝑻"."𝒇" in (𝓍, 𝓎, 𝓏))
   null_yes:
     html: default
   null_no: |
-    … not null
+    not null
   multiple: |
-    … 𝒕[]
+    𝒕[]
   example: null

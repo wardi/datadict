@@ -7,7 +7,7 @@ feature_examples:
     {
       "id": "𝓍",
       "name": "𝓎",
-      …
+      ⋯▽
     }
   source:
   - html: |
@@ -20,8 +20,7 @@ feature_examples:
     "resources": [
       {
         "name": "𝓍",
-        "schema": {…},
-        …
+        "schema": {⋯▽},
       }, …
     ]
   primary_key:
@@ -39,7 +38,7 @@ feature_examples:
     }]
   fields: |
     "fields": [
-      {"name": "𝒇", …},
+      {"name": "𝒇", ⋯▽},
       …
     ]
   field_title: |

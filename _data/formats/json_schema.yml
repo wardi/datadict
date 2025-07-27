@@ -6,7 +6,7 @@ feature_examples:
   preamble: |
     {
       "type": "object",
-      …
+      ⋯▽ 
     }
   source: null
   table: null
@@ -14,7 +14,7 @@ feature_examples:
   foreign_keys: null
   fields: |
     "properties": {
-      "𝒇": {…},
+      "𝒇": {⋯▽},
       …
     },
     "required" : [

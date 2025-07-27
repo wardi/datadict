@@ -9,7 +9,7 @@ feature_examples:
       "@type": "sc:Dataset",
       "conformsTo":
         "http://mlcommons.org/croissant/1.0",
-      …
+      ⋯▽
     }
   - html: |
       <a href="https://docs.mlcommons.org/croissant/docs/croissant-spec.html#schemaorgdataset">required properties</a>
@@ -28,7 +28,7 @@ feature_examples:
       {
         "@type": "cr:RecordSet",
         "@id": "𝑻",
-        …
+        ⋯▽
       }, …
     ]
   primary_key: |
@@ -45,7 +45,7 @@ feature_examples:
       {
         "@type": "cr:Field",
         "@id": "𝑻/𝒇",
-        …
+        ⋯▽
       },
       …
     ]
