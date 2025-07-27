@@ -1,5 +1,7 @@
 {% if examples.html %}
-  {{ examples.html }}
+  <div class="description">
+    {{ examples.html }}
+  </div>
 {% elsif examples.details %}
   <details>
     <summary>{{ examples.summary }}</summary>
@@ -10,7 +12,9 @@
 {% else %}
   {% for eg in examples %}
     {% if eg.html %}
-      {{ eg.html }}
+      <div class="description">
+        {{ eg.html }}
+      </div>
     {% elsif eg.details %}
       <details>
         <summary>{{ eg.summary }}</summary>

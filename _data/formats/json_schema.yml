@@ -3,6 +3,13 @@ url: https://json-schema.org/draft/2020-12/json-schema-core
 example_language: json
 default_show: true
 feature_examples:
+  preamble: |
+    {
+      "type": "object",
+      …
+    }
+  source: null
+  table: null
   primary_key: null
   foreign_keys: null
   fields: |

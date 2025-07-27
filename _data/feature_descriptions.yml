@@ -1,11 +1,14 @@
+preamble: Preamble
+source: Data source
+table: Table definition
 primary_key: Primary key
 foreign_keys: Foreign keys
 fields: Fields and names
 field_title: Field title
 field_description: Field description
-string: String field
+string: Text field
 integer: Integer field
-float: Decimal field
+float: Numeric field
 boolean: Boolean field
 iso_date: ISO Date field
 controlled_list: Controlled list field

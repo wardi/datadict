@@ -1,9 +1,15 @@
-<div class="example">
-  {%- if lang == 'json' -%}
-    {% highlight json %}{{ include.eg }}{% endhighlight %}
-  {%- elsif lang == 'xml' -%}
-    {% highlight xml %}{{ include.eg }}{% endhighlight %}
-  {%- elsif lang == 'sql' -%}
-    {% highlight sql %}{{ include.eg }}{% endhighlight %}
-  {%- endif -%}
-</div>
+{% if include.eg.html %}
+  <div class="description">
+    {{ include.eg.html }}
+  </div>
+{% else %}
+  <div class="example">
+    {%- if lang == 'json' -%}
+      {% highlight json %}{{ include.eg }}{% endhighlight %}
+    {%- elsif lang == 'xml' -%}
+      {% highlight xml %}{{ include.eg }}{% endhighlight %}
+    {%- elsif lang == 'sql' -%}
+      {% highlight sql %}{{ include.eg }}{% endhighlight %}
+    {%- endif -%}
+  </div>
+{% endif %}

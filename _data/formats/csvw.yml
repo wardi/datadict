@@ -3,6 +3,27 @@ url: https://w3c.github.io/csvw/metadata/
 example_language: json
 default_show: true
 feature_examples:
+  preamble:
+  - |
+    {
+      "@context": "http://www.w3.org/ns/csvw",
+      …
+    }
+  - |
+    {
+      "@context": "http://www.w3.org/ns/csvw",
+      "tables": [{…}, …]
+    }
+  source:
+  - html: defined at top <em>or</em> <code>tables</code> level
+  - |
+    "url": "https://𝓍"
+  - |
+    "url": "𝓍.csv"
+  table:
+  - html: defined as a sibling of <code>url</code>
+  - |
+    "tableSchema": {…},
   primary_key:
   - |
     "primaryKey": "𝓍"

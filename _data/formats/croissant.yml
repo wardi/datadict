@@ -3,10 +3,39 @@ url: https://docs.mlcommons.org/croissant/docs/croissant-spec.html
 example_language: json
 default_show: false
 feature_examples:
+  preamble:
+  - |
+    {
+      "@type": "sc:Dataset",
+      "conformsTo":
+        "http://mlcommons.org/croissant/1.0",
+      …
+    }
+  - html: |
+      <a href="https://docs.mlcommons.org/croissant/docs/croissant-spec.html#schemaorgdataset">required properties</a>
+  source:
+  - |
+    "distribution": [
+      {
+        "@type": "cr:FileObject",
+        "@id": "𝑭",
+        "contentUrl": "https://𝓍"
+      }, …
+    ]
+  table:
+  - |
+    "recordSet": [
+      {
+        "@type": "cr:RecordSet",
+        "@id": "𝑻",
+        …
+      }, …
+    ]
   primary_key: |
     "key": {"@id": "𝑻/𝓍"}
   foreign_keys:
-  - html: defined at the <code>field</code> level
+  - html: |
+      defined at the <code>field</code> level below
   - |
     "references": {
       "@id": "𝓎/𝓏"
@@ -37,7 +66,9 @@ feature_examples:
   controlled_list:
     summary:
       inline data + references
-    details: |
+    details:
+    - html: defined at the <code>distribution</code> level
+    - |
       {
         "@type": "cr:RecordSet",
         "@id": "𝒕",

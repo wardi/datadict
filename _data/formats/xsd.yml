@@ -1,7 +1,15 @@
-title: XSD
+title: XML Schema
 url: https://www.w3.org/TR/xmlschema11-1/
 example_language: xml
 feature_examples:
+  preamble: |
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <xs:schema
+      xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      …
+    </xs:schema>
+  source:
+  table:
   primary_key: null
   foreign_keys: null
   fields: |
@@ -46,7 +54,7 @@ feature_examples:
       </xs:simpleType>
       <xs:element … type="𝒕">
   null_yes: |
-    <xs:element … minOccurs="0"/>
+    <xs:element … nillable="true"/>
   null_no:
     html: default
   multiple: |

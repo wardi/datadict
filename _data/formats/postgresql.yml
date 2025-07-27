@@ -2,6 +2,10 @@ title: PostgreSQL
 url: https://www.postgresql.org/docs/current/sql-createtable.html
 example_language: sql
 feature_examples:
+  preamble: null
+  source: null
+  table: |
+    create table "𝑻" …;
   primary_key:
   - |
     primary key ("𝓍")
@@ -11,12 +15,14 @@ feature_examples:
     foreign key ("𝓍")
     references "𝓎"("𝓏")
   fields: |
-    create table "𝑻" (
+    (
       "𝒇" …,
       …
-    );
+    )
   field_title: null
-  field_description: |
+  field_description:
+  - html: as a separate statement
+  - |
     comment on column "𝑻"."𝒇"
     is '𝓍';
   string: |

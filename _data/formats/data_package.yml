@@ -1,8 +1,29 @@
 title: Data Package
-url: https://datapackage.org/standard/table-schema/
+url: https://datapackage.org/standard/data-package/
 example_language: json
 default_show: true
 feature_examples:
+  preamble: |
+    {
+      "id": "𝓍",
+      "name": "𝓎",
+      …
+    }
+  source:
+  - html: |
+      defined at the <code>resources</code> level below
+  - |
+    "path": "𝓍.csv"
+  - |
+    "path": ["𝓍.csv", "𝓎.csv"]
+  table: |
+    "resources": [
+      {
+        "name": "𝓍",
+        "schema": {…},
+        …
+      }, …
+    ]
   primary_key:
   - |
     "primaryKey": "𝓍"
