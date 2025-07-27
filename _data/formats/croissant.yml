@@ -8,7 +8,7 @@ feature_examples:
     {
       "@type": "sc:Dataset",
       "conformsTo":
-        "http://mlcommons.org/croissant/1.0",
+    "http://mlcommons.org/croissant/1.0",
       ⋯▽
     }
   - html: |
