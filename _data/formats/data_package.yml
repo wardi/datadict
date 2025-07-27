@@ -21,6 +21,7 @@ feature_examples:
       {
         "name": "𝓍",
         "schema": {⋯▽},
+        …
       }, …
     ]
   primary_key:
