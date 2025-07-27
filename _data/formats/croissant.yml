@@ -67,7 +67,7 @@ feature_examples:
     summary:
       inline data + references
     details:
-    - html: defined at the <code>distribution</code> level
+    - html: defined at the <code>recordSet</code> level
     - |
       {
         "@type": "cr:RecordSet",
@@ -90,9 +90,7 @@ feature_examples:
           {"𝒕/𝒌": 𝓎, "𝒕/𝒗": 𝒀},
           {"𝒕/𝒌": 𝓏, "𝒕/𝒗": 𝒁}
         ]
-      }
-    - html: + defined at the <code>recordSet</code> level
-    - |
+      },
       {
         "@type": "cr:RecordSet",
         "field": [
