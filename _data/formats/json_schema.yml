@@ -16,7 +16,10 @@ feature_examples:
     "properties": {
       "𝒇": {…},
       …
-    }
+    },
+    "required" : [
+      "𝒇", …
+    ]
   field_title: |
     "title": "𝓍"
   description: |
