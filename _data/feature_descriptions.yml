@@ -3,10 +3,12 @@ title: Title
 description: Description
 source: Data source
 license: License
+
 s1: <hr>
 table: Table definition
 primary_key: Primary key
 foreign_keys: Foreign keys
+
 s2: <hr>
 fields: Fields and names
 field_title: Field title
@@ -19,6 +21,7 @@ iso_date: ISO Date field
 null_yes: Null allowed
 null_no: Null disallowed
 multiple: Multiple values
+
 s3: <hr>
 controlled_list: Controlled list field
 length: Length limits
