@@ -26,6 +26,16 @@ feature_examples:
         "contentUrl": "https://𝓍"
       }, …
     ]
+  - summary: link from field
+    details:
+    - html: defined at the <code>field</code> level below
+    - |
+      "source": {
+        "fileSet": {"@id": "𝑭"},
+        "extract": {
+          "column": "𝓍"
+        }
+      }
   license: |
     "license": "https://𝓍"
   table:
