@@ -8,11 +8,17 @@ feature_examples:
       "type": "object",
       ⋯▽ 
     }
+  title: |
+    "title": "𝓍"
+  description: |
+    "description": "𝓍"
   source: null
+  license: null
   table: null
   primary_key: null
   foreign_keys: null
   fields: |
+    "type": "object",
     "properties": {
       "𝒇": {⋯▽},
       …
@@ -22,7 +28,7 @@ feature_examples:
     ]
   field_title: |
     "title": "𝓍"
-  description: |
+  field_description: |
     "description": "𝓍"
   string: |
     "type": "string"
@@ -35,8 +41,6 @@ feature_examples:
   iso_date: |
     "type": "string",
     "format": "date"
-  controlled_list: |
-    "enum": [𝓍, 𝓎, 𝓏]
   null_yes: |
     "type": [𝒕, "null"]
   null_no:
@@ -44,6 +48,16 @@ feature_examples:
   multiple: |
     "type": "array",
     "items": {"type": 𝒕}
+  controlled_list: |
+    "enum": [𝓍, 𝓎, 𝓏]
+  length: |
+    "minLength": 𝓍,
+    "maxLength": 𝓎
+  regex: |
+    "pattern": "𝓍"
+  range: |
+    "minimum": 𝓍,
+    "exclusiveMaximum": 𝓎
   example:
   - |
     "examples": [𝓍]

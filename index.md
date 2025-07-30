@@ -8,7 +8,7 @@ footer_dl:
   𝑻: table name
   𝒇: field name
   𝓍, 𝓎, 𝓏, 𝑿, 𝒀, 𝒁: placeholders
-  𝒕: (custom) type name
+  𝒕, 𝒃: custom, base type names
   𝒌, 𝒗: key, value field names
   𝒌ₜ, 𝒗ₜ: key, value field types
 ---

@@ -13,6 +13,10 @@ feature_examples:
     }
   - html: |
       <a href="https://docs.mlcommons.org/croissant/docs/croissant-spec.html#schemaorgdataset">required properties</a>
+  title: |
+    "name": "𝓍"
+  description: |
+    "description": "𝓍"
   source:
   - |
     "distribution": [
@@ -22,6 +26,8 @@ feature_examples:
         "contentUrl": "https://𝓍"
       }, …
     ]
+  license: |
+    "license": "https://𝓍"
   table:
   - |
     "recordSet": [
@@ -63,6 +69,10 @@ feature_examples:
     "dataType": "sc:Boolean"
   iso_date: |
     "dataType": "sc:Date"
+  null_yes: null
+  null_no: null
+  multiple: |
+    "repeated": true
   controlled_list:
     summary:
       inline data + references
@@ -103,10 +113,6 @@ feature_examples:
           }
         ]
       }
-  null_yes: null
-  null_no: null
-  multiple: |
-    "repeated": true
   example:
     - html: defined at the <code>RecordSet</code> level
     - |

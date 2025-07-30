@@ -9,6 +9,12 @@ feature_examples:
       "name": "𝓎",
       ⋯▽
     }
+  title: |
+    "title": "𝓍"
+  description:
+  - |
+    "description": "𝓍"
+  - html: in <a href="https://spec.commonmark.org/current/">CommonMark</a> format
   source:
   - html: |
       defined at the <code>resources</code> level below
@@ -16,6 +22,14 @@ feature_examples:
     "path": "𝓍.csv"
   - |
     "path": ["𝓍.csv", "𝓎.csv"]
+  license: |
+    "licenses": [
+      {
+        "name": "𝓍",
+        "path": "https://𝓎",
+        "title": "𝓏"
+      }, …
+    ]
   table: |
     "resources": [
       {
@@ -56,6 +70,13 @@ feature_examples:
     "type": "boolean"
   iso_date: |
     "type": "date"
+  null_yes:
+    html: default
+  null_no: |
+    "constraints": {
+      "required": true
+    }
+  multiple: null
   controlled_list:
   - |
     "categories": [𝓍, 𝓎, 𝓏]
@@ -71,12 +92,20 @@ feature_examples:
       "constraints": {
         "enum": [𝓍, 𝓎, 𝓏]
       }
-  null_yes:
-    html: default
-  null_no: |
+  length: |
     "constraints": {
-      "required": true
+      "minLength": 𝓍,
+      "maxLength": 𝓎
     }
-  multiple: null
+  regex: |
+    "constraints": {
+      "pattern": 𝓍
+    }
+  range:
+  - |
+    "constraints": {
+      "minimum": 𝓍,
+      "exclusiveMaximum": 𝓎
+    }
   example: |
     "example": 𝓍

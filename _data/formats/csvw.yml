@@ -10,20 +10,39 @@ feature_examples:
         "http://www.w3.org/ns/csvw",
       ⋯▽
     }
+  - summary: multiple tables
+    details: |
+      {
+        "@context":
+          "http://www.w3.org/ns/csvw",
+        "tables": [{⋯▽}, …]
+      }
+  title:
   - |
-    {
-      "@context":
-        "http://www.w3.org/ns/csvw",
-      "tables": [{⋯▽}, …]
-    }
+    "dc:title": "𝓍"
+  - summary: multilingual
+    details: |
+      "dc:title": [
+        {
+          "@value": "𝓍",
+          "@language": "en"
+        },
+        {
+          "@value": "𝓎",
+          "@language": "fr"
+        }
+      ]
+  description: null
   source:
-  - html: defined at top <em>or</em> <code>tables</code> level
   - |
     "url": "https://𝓍"
   - |
     "url": "𝓍.csv"
+  license: |
+    "dc:license": {
+      "@id": "https://𝓍"
+    }
   table:
-  - html: defined as a sibling of <code>url</code>
   - |
     "tableSchema": {⋯▽},
   primary_key:
@@ -70,10 +89,17 @@ feature_examples:
       "base": "date",
       "format": "yyyy-M-d"
     }
-  controlled_list: null
   null_yes:
     html: default
   null_no: |
     "required": true
   multiple: null
+  controlled_list: null
+  length: |
+    "minLength": 𝓍,
+    "maxLength": 𝓎
+  regex: null
+  range: |
+    "minimum": 𝓍,
+    "maximumExclusive": 𝓎
   example: null

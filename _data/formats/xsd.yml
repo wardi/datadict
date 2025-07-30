@@ -8,8 +8,27 @@ feature_examples:
     2001/XMLSchema">
       ⋯▽
     </xs:schema>
-  source:
-  table:
+  title: null
+  description:
+  - |
+    <xs:annotation>
+      <xs:documentation>
+        𝓍
+      </xs:documentation>
+    </xs:annotation>
+  - summary: multilingual
+    details: |
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+          𝓍
+        </xs:documentation>
+        <xs:documentation xml:lang="fr">
+          𝓎
+        </xs:documentation>
+      </xs:annotation>
+  source: null
+  table: null
+  license: null
   primary_key: null
   foreign_keys: null
   fields: |
@@ -46,21 +65,64 @@ feature_examples:
     <xs:element … type="xs:boolean"/>
   iso_date: |
     <xs:element … type="xs:date"/>
-  controlled_list:
-    summary: enumeration types
-    details: |
-      <xs:simpleType name="𝒕">
-        <xs:restriction base="…">
-          <xs:enumeration value="𝓍"/>
-          <xs:enumeration value="𝓎"/>
-          <xs:enumeration value="𝓏"/>
-        </xs:restriction>
-      </xs:simpleType>
-      <xs:element … type="𝒕"/>
   null_yes: |
     <xs:element … nillable="true"/>
   null_no:
     html: default
   multiple: |
     <xs:element … maxOccurs="unbounded"/>
+  controlled_list:
+    summary: enumeration types
+    details:
+    - |
+      <xs:simpleType name="𝒕">
+        <xs:restriction base="𝒃">
+          <xs:enumeration value="𝓍">
+            <annotation>
+              <documentation>
+                𝑿
+              </documentation>
+            </annotation>
+          </xs:enumeration>
+          <xs:enumeration value="𝓎">
+            <annotation>
+              <documentation>
+                𝒀
+              </documentation>
+            </annotation>
+          </xs:enumeration>
+          <xs:enumeration value="𝓏">
+            <annotation>
+              <documentation>
+                𝒁
+              </documentation>
+            </annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element … type="𝒕"/>
+    - html: multilingual labels left as an exercise for the reader
+  length: |
+    <xs:simpleType name="𝒕">
+      <xs:restriction base="string">
+        <xs:minLength value="𝓍"/>
+        <xs:maxLength value="𝓎"/>
+      </xs:restriction>
+    </xs:simpleType>
+    <xs:element … type="𝒕"/>
+  regex: |
+    <xs:simpleType name="𝒕">
+      <xs:restriction base="string">
+        <xs:pattern value="𝓍"/>
+      </xs:restriction>
+    </xs:simpleType>
+    <xs:element … type="𝒕"/>
+  range: |
+    <xs:simpleType name="𝒕">
+      <xs:restriction base="𝒃">
+        <xs:minInclusive value="𝓍"/>
+        <xs:maxExclusive value="𝓎"/>
+      </xs:restriction>
+    </xs:simpleType>
+    <xs:element … type="𝒕"/>
   example: null

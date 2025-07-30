@@ -1,8 +1,13 @@
 preamble: Preamble
+title: Title
+description: Description
 source: Data source
+license: License
+s1: <hr>
 table: Table definition
 primary_key: Primary key
 foreign_keys: Foreign keys
+s2: <hr>
 fields: Fields and names
 field_title: Field title
 field_description: Field description
@@ -11,8 +16,12 @@ integer: Integer field
 float: Numeric field
 boolean: Boolean field
 iso_date: ISO Date field
-controlled_list: Controlled list field
 null_yes: Null allowed
 null_no: Null disallowed
 multiple: Multiple values
+s3: <hr>
+controlled_list: Controlled list field
+length: Length limits
+regex: Regular expression
+range: Range limits
 example: Field examples

@@ -3,7 +3,13 @@ url: https://www.postgresql.org/docs/current/sql-createtable.html
 example_language: sql
 feature_examples:
   preamble: null
-  source: null
+  title: null
+  description: |
+    comment on table "𝑻"
+    is '𝓍';
+  source: |
+    copy "𝑻" from '𝓍.csv'
+    (format csv header);
   table: |
     create table "𝑻" ⋯▽;
   primary_key:
@@ -38,14 +44,22 @@ feature_examples:
     boolean
   iso_date: |
     date
-  controlled_list:
-  - html: defined after fields
-  - |
-    check ("𝑻"."𝒇" in (𝓍, 𝓎, 𝓏))
   null_yes:
     html: default
   null_no: |
     not null
   multiple: |
     𝒕[]
+  controlled_list:
+  - html: defined after fields
+  - |
+    check ("𝑻"."𝒇" in (𝓍, 𝓎, 𝓏))
+  length: |
+    check (char_length("𝑻"."𝒇")
+    between 𝓍 and 𝓎)
+  regex: |
+    check ("𝑻"."𝒇" ~ '𝓍')
+  range: |
+    check (𝓍 <= "𝑻"."𝒇" and
+    "𝑻"."𝒇" < 𝓎)
   example: null
