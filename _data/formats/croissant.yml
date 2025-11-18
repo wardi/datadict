@@ -47,8 +47,14 @@ feature_examples:
         ⋯▽
       }, …
     ]
-  primary_key: |
+  primary_key:
+  - |
     "key": {"@id": "𝑻/𝓍"}
+  - |
+    "key": [
+      {"@id": "𝑻/𝓍"},
+      {"@id": "𝑻/𝓎"}
+    ]
   foreign_keys:
   - html: |
       defined at the <code>field</code> level below
