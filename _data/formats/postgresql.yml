@@ -44,6 +44,8 @@ feature_examples:
     boolean
   iso_date: |
     date
+  timestamp: |
+    timestamp
   null_yes:
     html: default
   null_no: |

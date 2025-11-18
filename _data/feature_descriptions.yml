@@ -18,6 +18,7 @@ integer: Integer field
 float: Numeric field
 boolean: Boolean field
 iso_date: ISO Date field
+timestamp: ISO Timestamp
 null_yes: Null allowed
 null_no: Null disallowed
 multiple: Multiple values

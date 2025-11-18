@@ -65,6 +65,8 @@ feature_examples:
     <xs:element … type="xs:boolean"/>
   iso_date: |
     <xs:element … type="xs:date"/>
+  timestamp: |
+    <xs:element … type="xs:dateTime"/>
   null_yes: |
     <xs:element … nillable="true"/>
   null_no:

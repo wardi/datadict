@@ -85,6 +85,8 @@ feature_examples:
     "dataType": "sc:Boolean"
   iso_date: |
     "dataType": "sc:Date"
+  timestamp: |
+    "dataType": "sc:DateTime"
   null_yes: null
   null_no: null
   multiple: |

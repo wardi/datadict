@@ -89,6 +89,8 @@ feature_examples:
       "base": "date",
       "format": "yyyy-M-d"
     }
+  timestamp: |
+    "datatype": "datetime"
   null_yes:
     html: default
   null_no: |

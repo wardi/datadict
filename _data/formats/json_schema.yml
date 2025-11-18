@@ -41,6 +41,9 @@ feature_examples:
   iso_date: |
     "type": "string",
     "format": "date"
+  timestamp:
+    "type": "string",
+    "format": "date-time"
   null_yes: |
     "type": [𝒕, "null"]
   null_no:

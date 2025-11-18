@@ -70,6 +70,8 @@ feature_examples:
     "type": "boolean"
   iso_date: |
     "type": "date"
+  timestamp: |
+    "type": "datetime"
   null_yes:
     html: default
   null_no: |
