@@ -4,7 +4,7 @@
 | :--- |
 | NYC\_311\_SR\_2010-2020-sample-1M.csv |
 
-## Unique Key
+## `Unique Key`
 
 | Label | Type |
 | :--- | :--- |
@@ -20,7 +20,7 @@ A unique numeric identifier for each complaint record. It is the primary key in 
 | ---: | ---: | ---: | ---: |
 | 11465364 | 48478173 | 1000000 | 0 |
 
-## Created Date
+## `Created Date`
 
 | Label | Type |
 | :--- | :--- |
@@ -38,7 +38,7 @@ UTC timestamp indicating when a 311 service request was logged. The dates span f
 
 …
 
-## Status
+## `Status`
 
 | Label | Type |
 | :--- | :--- |
