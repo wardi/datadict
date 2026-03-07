@@ -1,11 +1,8 @@
-Generated using a Local LLM (openai/gpt-oss-20b) on LM Studio 0.4.2+2 running on a Macbook Pro M4 Max 64gb/Tahoe 26.3:
+# Data Dictionary
 
-```bash
-$ QSV_LLM_BASE_URL=http://localhost:1234/v1 qsv describegpt NYC_311_SR_2010-2020-sample-1M.csv --all \
-     --output nyc311-describegpt.md
-```
----
-# Dictionary
+| Source File |
+| :--- |
+| NYC\_311\_SR\_2010-2020-sample-1M.csv |
 
 ## Unique Key
 
