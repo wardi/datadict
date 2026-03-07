@@ -11,7 +11,7 @@ $ QSV_LLM_BASE_URL=http://localhost:1234/v1 qsv describegpt NYC_311_SR_2010-2020
 
 | Label | Type |
 | --- | --- |
-| Record | Integer |
+| Record Identifier | Integer |
 
 ### Description
 
