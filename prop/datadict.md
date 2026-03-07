@@ -20,7 +20,7 @@ A unique numeric identifier for each complaint record. It is the primary key in 
 ### Statistics
 
 | Min | Max | Cardinality | Null Count |
-| ---: | ---: | ---: | ---: | ---: |
+| ---: | ---: | ---: | ---: |
 | 11465364 | 48478173 | 1000000 | 0 |
 
 ## Created Date
@@ -36,7 +36,7 @@ UTC timestamp indicating when a 311 service request was logged. The dates span f
 ### Statistics
 
 | Min | Max | Cardinality |
-| ---: | ---: | ---: | ---: |
+| ---: | ---: | ---: |
 | 2010-01-01T00:00:00+00:00 | 2020-12-23T01:25:51+00:00 | 841014 |
 
 …
