@@ -10,7 +10,7 @@ $ QSV_LLM_BASE_URL=http://localhost:1234/v1 qsv describegpt NYC_311_SR_2010-2020
 ## Unique Key
 
 | Label | Type |
-| --- | --- |
+| :--- | :--- |
 | Record Identifier | Integer |
 
 ### Description
@@ -26,7 +26,7 @@ A unique numeric identifier for each complaint record. It is the primary key in 
 ## Created Date
 
 | Label | Type |
-| --- | --- |
+| :--- | :--- |
 | Complaint Creation Timestamp | DateTime |
 
 ### Description
@@ -44,7 +44,7 @@ UTC timestamp indicating when a 311 service request was logged. The dates span f
 ## Status
 
 | Label | Type |
-| --- | --- |
+| :--- | :--- |
 | Complaint Status | String |
 
 ### Description
@@ -54,7 +54,7 @@ Current processing status—Closed, Pending, Open, etc. Closed complaints domina
 ### Choices
 
 | Value |
-| --- |
+| :--- |
 | Assigned |
 | Closed |
 | Closed - Testing |
@@ -69,11 +69,11 @@ Current processing status—Closed, Pending, Open, etc. Closed complaints domina
 ### Statistics
 
 | Cardinality |
-| --- |
+| ---: |
 | 10 |
 
 | Choice | Frequency |
-| --- | --- |
+| :--- | ---: |
 | Pending | 20119 |
 | Open | 12340 |
 | In Progress | 7841 |
