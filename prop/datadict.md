@@ -36,8 +36,6 @@ UTC timestamp indicating when a 311 service request was logged. The dates span f
 | ---: | ---: | ---: |
 | 2010-01-01T00:00:00+00:00 | 2020-12-23T01:25:51+00:00 | 841014 |
 
-…
-
 ## `Status`
 
 | Label | Type |
@@ -65,9 +63,9 @@ Current processing status—Closed, Pending, Open, etc. Closed complaints domina
 
 ### Statistics
 
-| Cardinality |
-| ---: |
-| 10 |
+| Min | Max | Cardinality |
+| ---: | ---: | ---: |
+| Assigned| Unspecified | 10 |
 
 | Choice | Frequency |
 | :--- | ---: |
@@ -75,4 +73,3 @@ Current processing status—Closed, Pending, Open, etc. Closed complaints domina
 | Open | 12340 |
 | In Progress | 7841 |
 | Assigned | 6651 |
-
