@@ -1,10 +1,14 @@
+---
+schema: https://datadict.org/v0
+---
+
 # Dataset 311 NYC Data
+
+311 NYC dataset example
 
 | Resource | Table | Title |
 | --- | --- | --- |
 | NYC\_311\_SR\_2010-2020-sample-1M.csv | 311nyc | NYC 311 Data 1M row sample |
-
-311 NYC dataset example
 
 # Table 311nyc
 
