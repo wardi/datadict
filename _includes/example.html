@@ -10,6 +10,8 @@
       {% highlight xml %}{{ include.eg }}{% endhighlight %}
     {%- elsif lang == 'sql' -%}
       {% highlight sql %}{{ include.eg }}{% endhighlight %}
+    {%- elsif lang == 'md' -%}
+      {% highlight md %}{{ include.eg }}{% endhighlight %}
     {%- endif -%}
   </div>
 {% endif %}
