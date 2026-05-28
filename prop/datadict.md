@@ -1,5 +1,5 @@
 ---
-SemanticMD: https://datadict.org/v0
+semantic-md: https://datadict.org/v0.yml
 ---
 
 # Dataset 311 NYC Data
